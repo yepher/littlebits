@@ -9,6 +9,14 @@
 #import <Foundation/Foundation.h>
 #import "YFRBaseRequest.h"
 
+@protocol YFRGetDeviceDelegate <NSObject>
+
+- (void) onDevices:(NSArray*) devices;
+
+@end
+
 @interface YFRGetDevices : YFRBaseRequest
+
+@property (weak) id <YFRGetDeviceDelegate> delegate;
 
 @end

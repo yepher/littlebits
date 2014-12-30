@@ -25,12 +25,17 @@
 
 - (void) handleResponse:(id) response {
    
+    NSMutableArray* result = [NSMutableArray array];
     for(NSDictionary* dict in response) {
     
         YFRDevice* device = [YFRDevice parse:dict];
+        [result addObject:device];
         NSLog(@"Device: %@", device);
     }
     
+    if (self.delegate != nil) {
+        [self.delegate onDevices:result];
+    }
 }
 
 @end

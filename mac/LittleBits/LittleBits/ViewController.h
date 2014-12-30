@@ -7,8 +7,9 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import "YFRGetDevices.h"
 
-@interface ViewController : NSViewController
+@interface ViewController : NSViewController <NSOutlineViewDataSource, NSOutlineViewDelegate, YFRGetDeviceDelegate>
 
 
 @end
