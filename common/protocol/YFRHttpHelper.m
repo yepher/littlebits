@@ -78,9 +78,7 @@ static NSString* const SERVER_URL = @"https://api-http.littlebitscloud.cc";
         }
     }
     else if (jsonData != nil) {
-        // 1 Mobeam API is returning "plain/text" content type even though body is JSON
         NSLog(@"WARN: API not returning Content-Type: application/json! instead returning: %@", contentType);
-        // try to parse anyway..
         return [self getJsonResponse:jsonData withContentType:nil];
     }
     return jsonResponse;
