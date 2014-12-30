@@ -7,6 +7,7 @@
 //
 
 #import "YFRGetDevices.h"
+#import "YFRDevice.h"
 
 @implementation YFRGetDevices
 
@@ -21,4 +22,15 @@
 - (YFRRequestType) requestType {
     return YFR_REQUEST_TYPE_GET;
 }
+
+- (void) handleResponse:(id) response {
+   
+    for(NSDictionary* dict in response) {
+    
+        YFRDevice* device = [YFRDevice parse:dict];
+        NSLog(@"Device: %@", device);
+    }
+    
+}
+
 @end

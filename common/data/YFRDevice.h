@@ -22,5 +22,6 @@
 @property NSArray* subscriptions;
 @property NSArray* subscribers;
 
++ (YFRDevice*) parse:(NSDictionary*) response;
 
 @end

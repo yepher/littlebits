@@ -680,6 +680,16 @@
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qvi-KI-qck">
+                                <rect key="frame" x="5" y="154" width="122" height="32"/>
+                                <buttonCell key="cell" type="push" title="Load devices" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="xwW-po-hVV">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="onLoadDevices:" target="XfG-lQ-9wD" id="eU0-a6-Ozh"/>
+                                </connections>
+                            </button>
                             <secureTextField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="scn-pR-G8W">
                                 <rect key="frame" x="11" y="205" width="307" height="22"/>
                                 <secureTextFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" placeholderString="Put your Access Token Here" drawsBackground="YES" usesSingleLineMode="YES" id="jDg-3R-01y">

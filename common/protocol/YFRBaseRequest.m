@@ -29,4 +29,10 @@
     return YFR_REQUEST_TYPE_GET;
 }
 
+- (void) handleResponse:(id) response {
+    NSLog(@"ERROR: %s must be overridden", __PRETTY_FUNCTION__);
+    NSAssert(NO, @"must override method");
+    return;
+}
+
 @end

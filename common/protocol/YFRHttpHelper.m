@@ -57,13 +57,17 @@ static NSString* const SERVER_URL = @"https://api-http.littlebitscloud.cc";
     NSData *result = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
     
     NSInteger responseCode = [response statusCode];
+    if (responseCode == 200) {
     
-    // Get JSON result (server sends back JSON response for several non-200 status codes)
-    NSString *contentType = [[[response allHeaderFields] valueForKey:@"content-type"] lowercaseString];
-    id jsonResponse = [self getJsonResponse:result withContentType:contentType];
+        // Get JSON result (server sends back JSON response for several non-200 status codes)
+        NSString *contentType = [[[response allHeaderFields] valueForKey:@"content-type"] lowercaseString];
+        id jsonResponse = [self getJsonResponse:result withContentType:contentType];
 
-    NSLog(@"JsonResponse: %@", jsonResponse);
-    
+        NSLog(@"JsonResponse: %@", jsonResponse);
+        [requestObj handleResponse:jsonResponse];
+    } else {
+        NSLog(@"Failed to make request because: %@", response);
+    }
     
 }
 

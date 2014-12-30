@@ -21,4 +21,6 @@ typedef NS_ENUM(NSInteger, YFRRequestType) {
 - (NSString*) requestBody;
 - (YFRRequestType) requestType;
 
+- (void) handleResponse:(id) response;
+
 @end

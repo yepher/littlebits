@@ -7,6 +7,8 @@
 //
 
 #import "ViewController.h"
+#import "YFRHttpHelper.h"
+#import "YFRGetDevices.h"
 
 @interface ViewController ()
 
@@ -21,9 +23,10 @@
     [super viewDidLoad];
     
     NSString* tokenVal = [[NSUserDefaults standardUserDefaults] valueForKey:@"TOKEN"];
-
-    [self.tokenField setStringValue:[[NSUserDefaults standardUserDefaults] valueForKey:@"TOKEN"]];
-    // Do any additional setup after loading the view.
+    if (tokenVal != nil && tokenVal.length > 0) {
+        [self.tokenField setStringValue:tokenVal];
+    }
+    
 }
 
 - (void)setRepresentedObject:(id)representedObject {
@@ -36,6 +39,12 @@
     NSLog(@"%s: %@", __PRETTY_FUNCTION__, [sender stringValue]);
     
     [[NSUserDefaults standardUserDefaults] setValue:[sender stringValue] forKey:@"TOKEN"];
+}
+
+- (IBAction)onLoadDevices:(id)sender {
+    YFRHttpHelper* httpHelper = [YFRHttpHelper new];
+    YFRGetDevices* getDevices = [YFRGetDevices new];
+    [httpHelper doRequest: getDevices];
 }
 
 @end
