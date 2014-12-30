@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import "YFRHttpHelper.h"
+#import "YFRGetDevices.h"
 
 @interface AppDelegate ()
 
@@ -18,6 +20,11 @@
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
     // Insert code here to initialize your application
+    
+    YFRHttpHelper* httpHelper = [YFRHttpHelper new];
+    YFRGetDevices* getDevices = [YFRGetDevices new];
+    [httpHelper doRequest: getDevices];
+    
 }
 
 - (void)applicationWillTerminate:(NSNotification *)aNotification {

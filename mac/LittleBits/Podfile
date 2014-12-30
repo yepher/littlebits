@@ -1,0 +1,3 @@
+source 'https://github.com/CocoaPods/Specs.git'
+
+pod 'CocoaLumberjack', '1.9.2'        # logging framework (https://github.com/CocoaLumberjack/CocoaLumberjack)

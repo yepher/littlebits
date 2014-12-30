@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		52E7D344E1B3EC27CEFC9BEB /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E1AB96BFDA7A7EF4FFD19F7 /* libPods.a */; };
 		83D849221A522FDA00D2BE00 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 83D849211A522FDA00D2BE00 /* AppDelegate.m */; };
 		83D849241A522FDA00D2BE00 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 83D849231A522FDA00D2BE00 /* main.m */; };
 		83D849271A522FDA00D2BE00 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83D849261A522FDA00D2BE00 /* ViewController.m */; };
@@ -14,6 +15,20 @@
 		83D8492C1A522FDA00D2BE00 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83D8492B1A522FDA00D2BE00 /* Images.xcassets */; };
 		83D8492F1A522FDA00D2BE00 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83D8492D1A522FDA00D2BE00 /* Main.storyboard */; };
 		83D8493B1A522FDB00D2BE00 /* LittleBitsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 83D8493A1A522FDB00D2BE00 /* LittleBitsTests.m */; };
+		83D849461A52346800D2BE00 /* temp.txt in Resources */ = {isa = PBXBuildFile; fileRef = 83D849451A52346800D2BE00 /* temp.txt */; };
+		83D849471A52346800D2BE00 /* temp.txt in Resources */ = {isa = PBXBuildFile; fileRef = 83D849451A52346800D2BE00 /* temp.txt */; };
+		83D8494C1A5235D700D2BE00 /* YFRDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = 83D8494B1A5235D700D2BE00 /* YFRDevice.m */; };
+		83D8494D1A5235D700D2BE00 /* YFRDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = 83D8494B1A5235D700D2BE00 /* YFRDevice.m */; };
+		83D849501A52373300D2BE00 /* YFRAccessPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 83D8494F1A52373300D2BE00 /* YFRAccessPoint.m */; };
+		83D849511A52373300D2BE00 /* YFRAccessPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 83D8494F1A52373300D2BE00 /* YFRAccessPoint.m */; };
+		83D849541A52382300D2BE00 /* YFRBaseRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 83D849531A52382300D2BE00 /* YFRBaseRequest.m */; };
+		83D849551A52382300D2BE00 /* YFRBaseRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 83D849531A52382300D2BE00 /* YFRBaseRequest.m */; };
+		83D849581A52383D00D2BE00 /* YFRGetDevices.m in Sources */ = {isa = PBXBuildFile; fileRef = 83D849571A52383D00D2BE00 /* YFRGetDevices.m */; };
+		83D849591A52383D00D2BE00 /* YFRGetDevices.m in Sources */ = {isa = PBXBuildFile; fileRef = 83D849571A52383D00D2BE00 /* YFRGetDevices.m */; };
+		83D8495C1A5238E600D2BE00 /* YFRHttpHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 83D8495B1A5238E600D2BE00 /* YFRHttpHelper.m */; };
+		83D8495D1A5238E600D2BE00 /* YFRHttpHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 83D8495B1A5238E600D2BE00 /* YFRHttpHelper.m */; };
+		83D8495F1A524F4000D2BE00 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83D8495E1A524F4000D2BE00 /* CFNetwork.framework */; };
+		83D849651A52537600D2BE00 /* GCDAsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 83D849641A52537600D2BE00 /* GCDAsyncSocket.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,6 +42,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1F30115FC572CF4C2CC624C7 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		4E1AB96BFDA7A7EF4FFD19F7 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		67145E8D142C4EE1DFB761C0 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		83D8491B1A522FDA00D2BE00 /* LittleBits.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LittleBits.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		83D8491F1A522FDA00D2BE00 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		83D849201A522FDA00D2BE00 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -40,6 +58,21 @@
 		83D849341A522FDB00D2BE00 /* LittleBitsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LittleBitsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		83D849391A522FDB00D2BE00 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		83D8493A1A522FDB00D2BE00 /* LittleBitsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LittleBitsTests.m; sourceTree = "<group>"; };
+		83D849451A52346800D2BE00 /* temp.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = temp.txt; sourceTree = "<group>"; };
+		83D8494A1A5235D700D2BE00 /* YFRDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YFRDevice.h; sourceTree = "<group>"; };
+		83D8494B1A5235D700D2BE00 /* YFRDevice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YFRDevice.m; sourceTree = "<group>"; };
+		83D8494E1A52373300D2BE00 /* YFRAccessPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YFRAccessPoint.h; sourceTree = "<group>"; };
+		83D8494F1A52373300D2BE00 /* YFRAccessPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YFRAccessPoint.m; sourceTree = "<group>"; };
+		83D849521A52382300D2BE00 /* YFRBaseRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YFRBaseRequest.h; sourceTree = "<group>"; };
+		83D849531A52382300D2BE00 /* YFRBaseRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YFRBaseRequest.m; sourceTree = "<group>"; };
+		83D849561A52383D00D2BE00 /* YFRGetDevices.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YFRGetDevices.h; sourceTree = "<group>"; };
+		83D849571A52383D00D2BE00 /* YFRGetDevices.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YFRGetDevices.m; sourceTree = "<group>"; };
+		83D8495A1A5238E600D2BE00 /* YFRHttpHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YFRHttpHelper.h; sourceTree = "<group>"; };
+		83D8495B1A5238E600D2BE00 /* YFRHttpHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YFRHttpHelper.m; sourceTree = "<group>"; };
+		83D8495E1A524F4000D2BE00 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		83D849601A524FA400D2BE00 /* libPods-CocoaAsyncSocket.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-CocoaAsyncSocket.a"; path = "../../../../Library/Developer/Xcode/DerivedData/LittleBits-deimpsxokdtjtwbcazoadjscohwl/Build/Products/Debug/libPods-CocoaAsyncSocket.a"; sourceTree = "<group>"; };
+		83D849631A52537600D2BE00 /* GCDAsyncSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDAsyncSocket.h; sourceTree = "<group>"; };
+		83D849641A52537600D2BE00 /* GCDAsyncSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDAsyncSocket.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +80,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				83D8495F1A524F4000D2BE00 /* CFNetwork.framework in Frameworks */,
+				52E7D344E1B3EC27CEFC9BEB /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,9 +98,12 @@
 		83D849121A522FDA00D2BE00 = {
 			isa = PBXGroup;
 			children = (
+				83D849441A52346800D2BE00 /* common */,
 				83D8491D1A522FDA00D2BE00 /* LittleBits */,
 				83D849371A522FDB00D2BE00 /* LittleBitsTests */,
 				83D8491C1A522FDA00D2BE00 /* Products */,
+				DAE05492EB02D1BB70A5EFBD /* Pods */,
+				AECBE5D31B46B4CB713542E9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -119,6 +157,70 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		83D849441A52346800D2BE00 /* common */ = {
+			isa = PBXGroup;
+			children = (
+				83D849621A52537600D2BE00 /* external */,
+				83D849481A52358D00D2BE00 /* data */,
+				83D849491A52358D00D2BE00 /* protocol */,
+				83D849451A52346800D2BE00 /* temp.txt */,
+			);
+			name = common;
+			path = ../../common;
+			sourceTree = "<group>";
+		};
+		83D849481A52358D00D2BE00 /* data */ = {
+			isa = PBXGroup;
+			children = (
+				83D8494A1A5235D700D2BE00 /* YFRDevice.h */,
+				83D8494B1A5235D700D2BE00 /* YFRDevice.m */,
+				83D8494E1A52373300D2BE00 /* YFRAccessPoint.h */,
+				83D8494F1A52373300D2BE00 /* YFRAccessPoint.m */,
+			);
+			path = data;
+			sourceTree = "<group>";
+		};
+		83D849491A52358D00D2BE00 /* protocol */ = {
+			isa = PBXGroup;
+			children = (
+				83D849521A52382300D2BE00 /* YFRBaseRequest.h */,
+				83D849531A52382300D2BE00 /* YFRBaseRequest.m */,
+				83D849561A52383D00D2BE00 /* YFRGetDevices.h */,
+				83D849571A52383D00D2BE00 /* YFRGetDevices.m */,
+				83D8495A1A5238E600D2BE00 /* YFRHttpHelper.h */,
+				83D8495B1A5238E600D2BE00 /* YFRHttpHelper.m */,
+			);
+			path = protocol;
+			sourceTree = "<group>";
+		};
+		83D849621A52537600D2BE00 /* external */ = {
+			isa = PBXGroup;
+			children = (
+				83D849631A52537600D2BE00 /* GCDAsyncSocket.h */,
+				83D849641A52537600D2BE00 /* GCDAsyncSocket.m */,
+			);
+			path = external;
+			sourceTree = "<group>";
+		};
+		AECBE5D31B46B4CB713542E9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				83D849601A524FA400D2BE00 /* libPods-CocoaAsyncSocket.a */,
+				83D8495E1A524F4000D2BE00 /* CFNetwork.framework */,
+				4E1AB96BFDA7A7EF4FFD19F7 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DAE05492EB02D1BB70A5EFBD /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1F30115FC572CF4C2CC624C7 /* Pods.debug.xcconfig */,
+				67145E8D142C4EE1DFB761C0 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -126,9 +228,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 83D8493E1A522FDB00D2BE00 /* Build configuration list for PBXNativeTarget "LittleBits" */;
 			buildPhases = (
+				4409A73F4A712876FD8719F3 /* Check Pods Manifest.lock */,
 				83D849171A522FDA00D2BE00 /* Sources */,
 				83D849181A522FDA00D2BE00 /* Frameworks */,
 				83D849191A522FDA00D2BE00 /* Resources */,
+				34AAF1A7FE978199A189C3C3 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -200,6 +304,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				83D8492C1A522FDA00D2BE00 /* Images.xcassets in Resources */,
+				83D849461A52346800D2BE00 /* temp.txt in Resources */,
 				83D8492F1A522FDA00D2BE00 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -208,20 +313,60 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				83D849471A52346800D2BE00 /* temp.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		34AAF1A7FE978199A189C3C3 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4409A73F4A712876FD8719F3 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		83D849171A522FDA00D2BE00 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				83D849541A52382300D2BE00 /* YFRBaseRequest.m in Sources */,
+				83D849501A52373300D2BE00 /* YFRAccessPoint.m in Sources */,
 				83D849271A522FDA00D2BE00 /* ViewController.m in Sources */,
+				83D8494C1A5235D700D2BE00 /* YFRDevice.m in Sources */,
 				83D849241A522FDA00D2BE00 /* main.m in Sources */,
 				83D849221A522FDA00D2BE00 /* AppDelegate.m in Sources */,
+				83D849651A52537600D2BE00 /* GCDAsyncSocket.m in Sources */,
+				83D849581A52383D00D2BE00 /* YFRGetDevices.m in Sources */,
 				83D8492A1A522FDA00D2BE00 /* LittleBits.xcdatamodeld in Sources */,
+				83D8495C1A5238E600D2BE00 /* YFRHttpHelper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -229,7 +374,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				83D849551A52382300D2BE00 /* YFRBaseRequest.m in Sources */,
+				83D849511A52373300D2BE00 /* YFRAccessPoint.m in Sources */,
 				83D8493B1A522FDB00D2BE00 /* LittleBitsTests.m in Sources */,
+				83D849591A52383D00D2BE00 /* YFRGetDevices.m in Sources */,
+				83D8494D1A5235D700D2BE00 /* YFRDevice.m in Sources */,
+				83D8495D1A5238E600D2BE00 /* YFRHttpHelper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -333,22 +483,32 @@
 		};
 		83D8493F1A522FDB00D2BE00 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1F30115FC572CF4C2CC624C7 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = LittleBits/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/LittleBits-deimpsxokdtjtwbcazoadjscohwl/Build/Products/Debug",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
 		};
 		83D849401A522FDB00D2BE00 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 67145E8D142C4EE1DFB761C0 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = LittleBits/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/LittleBits-deimpsxokdtjtwbcazoadjscohwl/Build/Products/Debug",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -408,6 +568,7 @@
 				83D849401A522FDB00D2BE00 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		83D849411A522FDB00D2BE00 /* Build configuration list for PBXNativeTarget "LittleBitsTests" */ = {
 			isa = XCConfigurationList;
@@ -416,6 +577,7 @@
 				83D849431A522FDB00D2BE00 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
