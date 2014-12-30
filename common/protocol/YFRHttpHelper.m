@@ -33,8 +33,10 @@ static NSString* const SERVER_URL = @"https://api-http.littlebitscloud.cc";
     
     NSMutableDictionary *headers = [NSMutableDictionary new];
 
+    NSString* userToken = [[NSUserDefaults standardUserDefaults] valueForKey:@"TOKEN"];
+    
     // add standard headers
-    NSString* token = [NSString stringWithFormat:@"Bearer %@", @"YOUR_TOKEN"];
+    NSString* token = [NSString stringWithFormat:@"Bearer %@", userToken];
     [headers setObject:token forKey:@"Authorization"];
 
     [headers enumerateKeysAndObjectsUsingBlock:^(NSString *key, NSString *value, BOOL *stop) {
