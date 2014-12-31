@@ -67,10 +67,12 @@ static NSString* const SERVER_URL = @"https://api-http.littlebitscloud.cc";
     
         // Get JSON result (server sends back JSON response for several non-200 status codes)
         NSString *contentType = [[[response allHeaderFields] valueForKey:CONTENT_TYPE] lowercaseString];
-        id jsonResponse = [self getJsonResponse:result withContentType:contentType];
+        if ([contentType rangeOfString:@"json"].location != NSNotFound) {
+            id jsonResponse = [self getJsonResponse:result withContentType:contentType];
 
-        NSLog(@"JsonResponse: %@", jsonResponse);
-        [requestObj handleResponse:jsonResponse];
+            NSLog(@"JsonResponse: %@", jsonResponse);
+            [requestObj handleResponse:jsonResponse];
+        }
     } else {
         NSLog(@"Failed to make request because: %@", response);
     }

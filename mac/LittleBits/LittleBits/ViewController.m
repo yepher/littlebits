@@ -113,6 +113,7 @@
     [httpHelper doRequest: request];
 }
 
+
 #pragma mark - NSOutlineView Delegates
 
 - (NSInteger)outlineView:(NSOutlineView *)outlineView numberOfChildrenOfItem:(id)item {
@@ -170,6 +171,5 @@
     return YES;
 }
 
-- (IBAction)cloudButtonInput:(id)sender {
-}
+
 @end
