@@ -3,5 +3,5 @@
 This project is an application for the LittleBits API.
 
 See:
-http://developer.littlebitscloud.cc/access
-http://developer.littlebitscloud.cc/api-http
+[Access API](http://developer.littlebitscloud.cc/access) 
+[HTTP API](http://developer.littlebitscloud.cc/api-http)

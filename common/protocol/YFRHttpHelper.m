@@ -7,6 +7,7 @@
 //
 
 #import "YFRHttpHelper.h"
+#import "YFRConstants.h"
 #import "GCDAsyncSocket.h"
 #import "YFRBaseRequest.h"
 
@@ -33,18 +34,18 @@ static NSString* const SERVER_URL = @"https://api-http.littlebitscloud.cc";
     
     NSMutableDictionary *headers = [NSMutableDictionary new];
 
-    NSString* userToken = [[NSUserDefaults standardUserDefaults] valueForKey:@"TOKEN"];
+    NSString* userToken = [[NSUserDefaults standardUserDefaults] valueForKey:PREF_TOKEN_KEY];
     
     // add standard headers
     NSString* token = [NSString stringWithFormat:@"Bearer %@", userToken];
-    [headers setObject:token forKey:@"Authorization"];
+    [headers setObject:token forKey:HTTP_HEADER_AUTHORIZATION];
 
     [headers enumerateKeysAndObjectsUsingBlock:^(NSString *key, NSString *value, BOOL *stop) {
         // add header
         [request setValue:value forHTTPHeaderField:key];
     }];
     
-    [request setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
+    [request setValue:CONTENT_TYPE_JSON forHTTPHeaderField:CONTENT_TYPE];
     
 //    if ([requestObj requestType] == YFR_REQUEST_TYPE_POST) {
 //        NSDictionary *requestData = [handler getRequestBody];
@@ -60,7 +61,7 @@ static NSString* const SERVER_URL = @"https://api-http.littlebitscloud.cc";
     if (responseCode == 200) {
     
         // Get JSON result (server sends back JSON response for several non-200 status codes)
-        NSString *contentType = [[[response allHeaderFields] valueForKey:@"content-type"] lowercaseString];
+        NSString *contentType = [[[response allHeaderFields] valueForKey:CONTENT_TYPE] lowercaseString];
         id jsonResponse = [self getJsonResponse:result withContentType:contentType];
 
         NSLog(@"JsonResponse: %@", jsonResponse);
@@ -74,7 +75,7 @@ static NSString* const SERVER_URL = @"https://api-http.littlebitscloud.cc";
 - (id)getJsonResponse:(NSData *)jsonData withContentType:(NSString *)contentType {
     id jsonResponse = nil;
     
-    if (jsonData != nil && ([contentType hasPrefix:@"application/json"] || contentType == nil)) {
+    if (jsonData != nil && ([contentType hasPrefix:CONTENT_TYPE_JSON] || contentType == nil)) {
         NSError *jsonError = nil;
         jsonResponse = [NSJSONSerialization JSONObjectWithData:jsonData options:NSJSONReadingMutableContainers error:&jsonError];
         if (jsonError != nil) {

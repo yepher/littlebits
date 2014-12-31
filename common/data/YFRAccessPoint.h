@@ -16,4 +16,6 @@
 @property NSString* serverId;
 @property NSString* socketId;
 
++ (YFRAccessPoint*) parse:(NSDictionary*) response;
+
 @end

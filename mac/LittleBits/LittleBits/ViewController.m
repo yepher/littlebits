@@ -7,9 +7,11 @@
 //
 
 #import "ViewController.h"
+#import "YFRConstants.h"
 #import "YFRHttpHelper.h"
 #import "YFRGetDevices.h"
 #import "YFRDevice.h"
+#import "YFRAccessPoint.h"
 
 @interface ViewController ()
 
@@ -27,7 +29,7 @@
     
     self.devices = [NSArray array];
     
-    NSString* tokenVal = [[NSUserDefaults standardUserDefaults] valueForKey:@"TOKEN"];
+    NSString* tokenVal = [[NSUserDefaults standardUserDefaults] valueForKey:PREF_TOKEN_KEY];
     if (tokenVal != nil && tokenVal.length > 0) {
         [self.tokenField setStringValue:tokenVal];
     }
@@ -43,7 +45,7 @@
 - (IBAction)onToken:(id)sender {
     NSLog(@"%s: %@", __PRETTY_FUNCTION__, [sender stringValue]);
     
-    [[NSUserDefaults standardUserDefaults] setValue:[sender stringValue] forKey:@"TOKEN"];
+    [[NSUserDefaults standardUserDefaults] setValue:[sender stringValue] forKey:PREF_TOKEN_KEY];
 }
 
 - (IBAction)onLoadDevices:(id)sender {
@@ -59,6 +61,8 @@
     [self.deviceListView reloadData];
     
 }
+
+
 
 #pragma mark - NSOutlineView Delegates
 
@@ -97,15 +101,22 @@
         result = [outlineView makeViewWithIdentifier:@"DataCell" owner:self];
     }
     YFRDevice* device = item;
-    [[result textField] setStringValue:[device deviceId]];
+    [[result textField] setStringValue:[NSString stringWithFormat:@"%@ (sig=%@)", device.label, device.accessPoint.strength]];
+    [result setToolTip:[device deviceId]];
     
-//    if (device.isConnected) {
-//        [[result textField] setTextColor:[NSColor greenColor]];
-//    } else {
-//        [[result textField] setTextColor:[NSColor redColor]];
-//    }
+   
+    if (device.isConnected) {
+         [[result imageView] setImage:[NSImage imageNamed:@"connected"]];
+    } else {
+         [[result imageView] setImage:[NSImage imageNamed:@"disconnected"]];
+    }
     
     return result;
+}
+
+- (BOOL)outlineView:(NSOutlineView *)outlineView shouldSelectItem:(id)item {
+    NSLog(@"%s", __PRETTY_FUNCTION__);
+    return YES;
 }
 
 @end

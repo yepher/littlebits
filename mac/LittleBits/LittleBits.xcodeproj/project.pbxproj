@@ -29,6 +29,11 @@
 		83D8495D1A5238E600D2BE00 /* YFRHttpHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 83D8495B1A5238E600D2BE00 /* YFRHttpHelper.m */; };
 		83D8495F1A524F4000D2BE00 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83D8495E1A524F4000D2BE00 /* CFNetwork.framework */; };
 		83D849651A52537600D2BE00 /* GCDAsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 83D849641A52537600D2BE00 /* GCDAsyncSocket.m */; };
+		83DB83C71A5347B5004B7DCA /* YFRConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 83DB83C61A5347B5004B7DCA /* YFRConstants.m */; };
+		83DB83CA1A534BA9004B7DCA /* YFRLittleBitsClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 83DB83C91A534BA9004B7DCA /* YFRLittleBitsClient.m */; };
+		83DB83CB1A534BA9004B7DCA /* YFRLittleBitsClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 83DB83C91A534BA9004B7DCA /* YFRLittleBitsClient.m */; };
+		83DB83CD1A534F0B004B7DCA /* LittleBits.icns in Resources */ = {isa = PBXBuildFile; fileRef = 83DB83CC1A534F0B004B7DCA /* LittleBits.icns */; };
+		83DB83CE1A534F0B004B7DCA /* LittleBits.icns in Resources */ = {isa = PBXBuildFile; fileRef = 83DB83CC1A534F0B004B7DCA /* LittleBits.icns */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +78,11 @@
 		83D849601A524FA400D2BE00 /* libPods-CocoaAsyncSocket.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-CocoaAsyncSocket.a"; path = "../../../../Library/Developer/Xcode/DerivedData/LittleBits-deimpsxokdtjtwbcazoadjscohwl/Build/Products/Debug/libPods-CocoaAsyncSocket.a"; sourceTree = "<group>"; };
 		83D849631A52537600D2BE00 /* GCDAsyncSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDAsyncSocket.h; sourceTree = "<group>"; };
 		83D849641A52537600D2BE00 /* GCDAsyncSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDAsyncSocket.m; sourceTree = "<group>"; };
+		83DB83C51A5347B5004B7DCA /* YFRConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YFRConstants.h; sourceTree = "<group>"; };
+		83DB83C61A5347B5004B7DCA /* YFRConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YFRConstants.m; sourceTree = "<group>"; };
+		83DB83C81A534BA9004B7DCA /* YFRLittleBitsClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YFRLittleBitsClient.h; sourceTree = "<group>"; };
+		83DB83C91A534BA9004B7DCA /* YFRLittleBitsClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YFRLittleBitsClient.m; sourceTree = "<group>"; };
+		83DB83CC1A534F0B004B7DCA /* LittleBits.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = LittleBits.icns; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +144,7 @@
 		83D8491E1A522FDA00D2BE00 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				83DB83CC1A534F0B004B7DCA /* LittleBits.icns */,
 				83D8491F1A522FDA00D2BE00 /* Info.plist */,
 				83D849231A522FDA00D2BE00 /* main.m */,
 			);
@@ -185,10 +196,14 @@
 			children = (
 				83D849521A52382300D2BE00 /* YFRBaseRequest.h */,
 				83D849531A52382300D2BE00 /* YFRBaseRequest.m */,
+				83DB83C51A5347B5004B7DCA /* YFRConstants.h */,
+				83DB83C61A5347B5004B7DCA /* YFRConstants.m */,
 				83D849561A52383D00D2BE00 /* YFRGetDevices.h */,
 				83D849571A52383D00D2BE00 /* YFRGetDevices.m */,
 				83D8495A1A5238E600D2BE00 /* YFRHttpHelper.h */,
 				83D8495B1A5238E600D2BE00 /* YFRHttpHelper.m */,
+				83DB83C81A534BA9004B7DCA /* YFRLittleBitsClient.h */,
+				83DB83C91A534BA9004B7DCA /* YFRLittleBitsClient.m */,
 			);
 			path = protocol;
 			sourceTree = "<group>";
@@ -304,6 +319,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				83D8492C1A522FDA00D2BE00 /* Images.xcassets in Resources */,
+				83DB83CD1A534F0B004B7DCA /* LittleBits.icns in Resources */,
 				83D849461A52346800D2BE00 /* temp.txt in Resources */,
 				83D8492F1A522FDA00D2BE00 /* Main.storyboard in Resources */,
 			);
@@ -314,6 +330,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				83D849471A52346800D2BE00 /* temp.txt in Resources */,
+				83DB83CE1A534F0B004B7DCA /* LittleBits.icns in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -357,9 +374,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				83DB83CA1A534BA9004B7DCA /* YFRLittleBitsClient.m in Sources */,
 				83D849541A52382300D2BE00 /* YFRBaseRequest.m in Sources */,
 				83D849501A52373300D2BE00 /* YFRAccessPoint.m in Sources */,
 				83D849271A522FDA00D2BE00 /* ViewController.m in Sources */,
+				83DB83C71A5347B5004B7DCA /* YFRConstants.m in Sources */,
 				83D8494C1A5235D700D2BE00 /* YFRDevice.m in Sources */,
 				83D849241A522FDA00D2BE00 /* main.m in Sources */,
 				83D849221A522FDA00D2BE00 /* AppDelegate.m in Sources */,
@@ -375,6 +394,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				83D849551A52382300D2BE00 /* YFRBaseRequest.m in Sources */,
+				83DB83CB1A534BA9004B7DCA /* YFRLittleBitsClient.m in Sources */,
 				83D849511A52373300D2BE00 /* YFRAccessPoint.m in Sources */,
 				83D8493B1A522FDB00D2BE00 /* LittleBitsTests.m in Sources */,
 				83D849591A52383D00D2BE00 /* YFRGetDevices.m in Sources */,

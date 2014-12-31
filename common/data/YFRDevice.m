@@ -7,6 +7,7 @@
 //
 
 #import "YFRDevice.h"
+#import "YFRAccessPoint.h"
 
 /**
  Example Device:
@@ -44,7 +45,16 @@
     device.subscriptions = [response objectForKey:@"subscriptions"];
     device.subscribers = [response objectForKey:@"subscribers"];
     
+    NSDictionary* apDict = [response objectForKey:@"ap"];
+    YFRAccessPoint* accessPoint = [YFRAccessPoint parse:apDict];
+    device.accessPoint = accessPoint;
+    
     return device;
 }
+
+- (NSString*) description {
+    return [NSString stringWithFormat:@"id:%@, label:%@, userId:%@, ap:[%@]", self.deviceId, self.label, self.userId, self.accessPoint];
+}
+
 
 @end
