@@ -15,8 +15,6 @@
 		83D8492C1A522FDA00D2BE00 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83D8492B1A522FDA00D2BE00 /* Images.xcassets */; };
 		83D8492F1A522FDA00D2BE00 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83D8492D1A522FDA00D2BE00 /* Main.storyboard */; };
 		83D8493B1A522FDB00D2BE00 /* LittleBitsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 83D8493A1A522FDB00D2BE00 /* LittleBitsTests.m */; };
-		83D849461A52346800D2BE00 /* temp.txt in Resources */ = {isa = PBXBuildFile; fileRef = 83D849451A52346800D2BE00 /* temp.txt */; };
-		83D849471A52346800D2BE00 /* temp.txt in Resources */ = {isa = PBXBuildFile; fileRef = 83D849451A52346800D2BE00 /* temp.txt */; };
 		83D8494C1A5235D700D2BE00 /* YFRDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = 83D8494B1A5235D700D2BE00 /* YFRDevice.m */; };
 		83D8494D1A5235D700D2BE00 /* YFRDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = 83D8494B1A5235D700D2BE00 /* YFRDevice.m */; };
 		83D849501A52373300D2BE00 /* YFRAccessPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 83D8494F1A52373300D2BE00 /* YFRAccessPoint.m */; };
@@ -34,6 +32,8 @@
 		83DB83CB1A534BA9004B7DCA /* YFRLittleBitsClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 83DB83C91A534BA9004B7DCA /* YFRLittleBitsClient.m */; };
 		83DB83CD1A534F0B004B7DCA /* LittleBits.icns in Resources */ = {isa = PBXBuildFile; fileRef = 83DB83CC1A534F0B004B7DCA /* LittleBits.icns */; };
 		83DB83CE1A534F0B004B7DCA /* LittleBits.icns in Resources */ = {isa = PBXBuildFile; fileRef = 83DB83CC1A534F0B004B7DCA /* LittleBits.icns */; };
+		83DB83D11A537C0E004B7DCA /* YFROutputRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 83DB83D01A537C0E004B7DCA /* YFROutputRequest.m */; };
+		83DB83D21A537C0E004B7DCA /* YFROutputRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 83DB83D01A537C0E004B7DCA /* YFROutputRequest.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,7 +63,6 @@
 		83D849341A522FDB00D2BE00 /* LittleBitsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LittleBitsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		83D849391A522FDB00D2BE00 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		83D8493A1A522FDB00D2BE00 /* LittleBitsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LittleBitsTests.m; sourceTree = "<group>"; };
-		83D849451A52346800D2BE00 /* temp.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = temp.txt; sourceTree = "<group>"; };
 		83D8494A1A5235D700D2BE00 /* YFRDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YFRDevice.h; sourceTree = "<group>"; };
 		83D8494B1A5235D700D2BE00 /* YFRDevice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YFRDevice.m; sourceTree = "<group>"; };
 		83D8494E1A52373300D2BE00 /* YFRAccessPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YFRAccessPoint.h; sourceTree = "<group>"; };
@@ -83,6 +82,8 @@
 		83DB83C81A534BA9004B7DCA /* YFRLittleBitsClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YFRLittleBitsClient.h; sourceTree = "<group>"; };
 		83DB83C91A534BA9004B7DCA /* YFRLittleBitsClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YFRLittleBitsClient.m; sourceTree = "<group>"; };
 		83DB83CC1A534F0B004B7DCA /* LittleBits.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = LittleBits.icns; sourceTree = "<group>"; };
+		83DB83CF1A537C0E004B7DCA /* YFROutputRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YFROutputRequest.h; sourceTree = "<group>"; };
+		83DB83D01A537C0E004B7DCA /* YFROutputRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YFROutputRequest.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -174,7 +175,6 @@
 				83D849621A52537600D2BE00 /* external */,
 				83D849481A52358D00D2BE00 /* data */,
 				83D849491A52358D00D2BE00 /* protocol */,
-				83D849451A52346800D2BE00 /* temp.txt */,
 			);
 			name = common;
 			path = ../../common;
@@ -183,10 +183,10 @@
 		83D849481A52358D00D2BE00 /* data */ = {
 			isa = PBXGroup;
 			children = (
-				83D8494A1A5235D700D2BE00 /* YFRDevice.h */,
-				83D8494B1A5235D700D2BE00 /* YFRDevice.m */,
 				83D8494E1A52373300D2BE00 /* YFRAccessPoint.h */,
 				83D8494F1A52373300D2BE00 /* YFRAccessPoint.m */,
+				83D8494A1A5235D700D2BE00 /* YFRDevice.h */,
+				83D8494B1A5235D700D2BE00 /* YFRDevice.m */,
 			);
 			path = data;
 			sourceTree = "<group>";
@@ -204,6 +204,8 @@
 				83D8495B1A5238E600D2BE00 /* YFRHttpHelper.m */,
 				83DB83C81A534BA9004B7DCA /* YFRLittleBitsClient.h */,
 				83DB83C91A534BA9004B7DCA /* YFRLittleBitsClient.m */,
+				83DB83CF1A537C0E004B7DCA /* YFROutputRequest.h */,
+				83DB83D01A537C0E004B7DCA /* YFROutputRequest.m */,
 			);
 			path = protocol;
 			sourceTree = "<group>";
@@ -320,7 +322,6 @@
 			files = (
 				83D8492C1A522FDA00D2BE00 /* Images.xcassets in Resources */,
 				83DB83CD1A534F0B004B7DCA /* LittleBits.icns in Resources */,
-				83D849461A52346800D2BE00 /* temp.txt in Resources */,
 				83D8492F1A522FDA00D2BE00 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -329,7 +330,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				83D849471A52346800D2BE00 /* temp.txt in Resources */,
 				83DB83CE1A534F0B004B7DCA /* LittleBits.icns in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -378,6 +378,7 @@
 				83D849541A52382300D2BE00 /* YFRBaseRequest.m in Sources */,
 				83D849501A52373300D2BE00 /* YFRAccessPoint.m in Sources */,
 				83D849271A522FDA00D2BE00 /* ViewController.m in Sources */,
+				83DB83D11A537C0E004B7DCA /* YFROutputRequest.m in Sources */,
 				83DB83C71A5347B5004B7DCA /* YFRConstants.m in Sources */,
 				83D8494C1A5235D700D2BE00 /* YFRDevice.m in Sources */,
 				83D849241A522FDA00D2BE00 /* main.m in Sources */,
@@ -393,6 +394,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				83DB83D21A537C0E004B7DCA /* YFROutputRequest.m in Sources */,
 				83D849551A52382300D2BE00 /* YFRBaseRequest.m in Sources */,
 				83DB83CB1A534BA9004B7DCA /* YFRLittleBitsClient.m in Sources */,
 				83D849511A52373300D2BE00 /* YFRAccessPoint.m in Sources */,

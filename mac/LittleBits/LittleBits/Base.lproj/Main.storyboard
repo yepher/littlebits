@@ -795,19 +795,25 @@
                                 </scroller>
                             </scrollView>
                             <slider verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="6Ug-rY-oG2">
-                                <rect key="frame" x="331" y="124" width="114" height="21"/>
-                                <sliderCell key="cell" state="on" alignment="left" maxValue="100" doubleValue="50" tickMarkPosition="above" sliderType="linear" id="QB9-sd-0Kr"/>
+                                <rect key="frame" x="331" y="125" width="114" height="20"/>
+                                <sliderCell key="cell" state="on" alignment="left" maxValue="99" doubleValue="50" tickMarkPosition="above" sliderType="linear" id="QB9-sd-0Kr"/>
+                                <connections>
+                                    <action selector="onSliderInput:" target="XfG-lQ-9wD" id="qjf-Gb-dmB"/>
+                                </connections>
                             </slider>
                             <levelIndicator verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="71G-mP-b2m">
-                                <rect key="frame" x="333" y="67" width="110" height="16"/>
-                                <levelIndicatorCell key="cell" alignment="left" doubleValue="2" maxValue="2" warningValue="2" criticalValue="2" levelIndicatorStyle="continuousCapacity" id="5os-Kg-hgt"/>
+                                <rect key="frame" x="333" y="68" width="110" height="16"/>
+                                <levelIndicatorCell key="cell" alignment="left" doubleValue="50" maxValue="99" warningValue="2" criticalValue="2" levelIndicatorStyle="continuousCapacity" id="5os-Kg-hgt"/>
                             </levelIndicator>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="dak-lx-7x4">
-                                <rect key="frame" x="327" y="90" width="122" height="32"/>
-                                <buttonCell key="cell" type="push" title="Button" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="DAn-hP-hHP">
+                                <rect key="frame" x="327" y="91" width="122" height="32"/>
+                                <buttonCell key="cell" type="push" title="Trigger" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="DAn-hP-hHP">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
+                                <connections>
+                                    <action selector="onButtonInput:" target="XfG-lQ-9wD" id="bCl-fn-2r7"/>
+                                </connections>
                             </button>
                         </subviews>
                         <constraints>
@@ -832,6 +838,9 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="cloudButtonInput" destination="dak-lx-7x4" id="u5w-SN-oPV"/>
+                        <outlet property="cloudLevelOutput" destination="71G-mP-b2m" id="vpI-d4-KTj"/>
+                        <outlet property="cloudSliderInput" destination="6Ug-rY-oG2" id="ZN7-2o-EdI"/>
                         <outlet property="deviceListView" destination="xfH-Xb-Fdn" id="BFc-G6-3GH"/>
                         <outlet property="tokenField" destination="scn-pR-G8W" id="uju-oW-hUZ"/>
                     </connections>

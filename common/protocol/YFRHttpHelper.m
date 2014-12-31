@@ -46,10 +46,15 @@ static NSString* const SERVER_URL = @"https://api-http.littlebitscloud.cc";
     }];
     
     [request setValue:CONTENT_TYPE_JSON forHTTPHeaderField:CONTENT_TYPE];
+    //[request setValue:@"application/vnd.littlebits.v2+json" forKey:@"Accept"];
+    //Accept: application/vnd.littlebits.v2+json
     
-//    if ([requestObj requestType] == YFR_REQUEST_TYPE_POST) {
-//        NSDictionary *requestData = [handler getRequestBody];
-//    }
+    if ([requestObj requestType] == YFR_REQUEST_TYPE_POST) {
+        NSString *requestData = [requestObj requestBody];
+        [request setHTTPMethod:@"POST"];
+        [request setHTTPBody:[requestData dataUsingEncoding:NSUTF8StringEncoding]];
+
+    }
     
     NSHTTPURLResponse *response;
     NSError *error = nil;
