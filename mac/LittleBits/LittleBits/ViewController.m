@@ -32,6 +32,10 @@
 
 @implementation ViewController
 
+- (IBAction)onTokenHelp:(id)sender {
+    [[NSWorkspace sharedWorkspace] openURL:[NSURL URLWithString:@"http://developer.littlebitscloud.cc/access"]];
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     

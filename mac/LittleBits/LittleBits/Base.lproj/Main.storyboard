@@ -691,9 +691,9 @@
                                 </connections>
                             </button>
                             <secureTextField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="scn-pR-G8W">
-                                <rect key="frame" x="11" y="205" width="307" height="22"/>
+                                <rect key="frame" x="34" y="205" width="284" height="22"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="307" id="bap-M4-u5K"/>
+                                    <constraint firstAttribute="width" constant="284" id="bap-M4-u5K"/>
                                 </constraints>
                                 <secureTextFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" placeholderString="Put your Access Token Here" drawsBackground="YES" usesSingleLineMode="YES" id="jDg-3R-01y">
                                     <font key="font" metaFont="system"/>
@@ -825,9 +825,19 @@
                                     <action selector="onButtonInput:" target="XfG-lQ-9wD" id="bCl-fn-2r7"/>
                                 </connections>
                             </button>
+                            <button horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="B7l-C8-2ml">
+                                <rect key="frame" x="9" y="203" width="25" height="25"/>
+                                <buttonCell key="cell" type="help" bezelStyle="helpButton" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="8VL-nr-jZC">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="onTokenHelp:" target="XfG-lQ-9wD" id="sC3-1m-qkh"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <constraints>
-                            <constraint firstItem="scn-pR-G8W" firstAttribute="leading" secondItem="3Bg-Ki-PwV" secondAttribute="leading" id="1A4-im-6mi"/>
+                            <constraint firstItem="scn-pR-G8W" firstAttribute="leading" secondItem="3Bg-Ki-PwV" secondAttribute="leading" constant="23" id="1A4-im-6mi"/>
                             <constraint firstItem="6Ug-rY-oG2" firstAttribute="leading" secondItem="3Bg-Ki-PwV" secondAttribute="trailing" constant="26" id="27u-37-coV"/>
                             <constraint firstItem="3Bg-Ki-PwV" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="11" id="2Gj-Up-Fn3"/>
                             <constraint firstItem="scn-pR-G8W" firstAttribute="top" secondItem="OrH-K3-vQp" secondAttribute="bottom" constant="3" id="3ro-dd-0WX"/>
@@ -840,7 +850,7 @@
                             <constraint firstItem="71G-mP-b2m" firstAttribute="leading" secondItem="3Bg-Ki-PwV" secondAttribute="trailing" constant="26" id="M1G-25-dyw"/>
                             <constraint firstItem="71G-mP-b2m" firstAttribute="top" secondItem="dak-lx-7x4" secondAttribute="bottom" constant="89" id="Pdo-Nq-rWz"/>
                             <constraint firstItem="scn-pR-G8W" firstAttribute="top" secondItem="qvi-KI-qck" secondAttribute="top" id="VIK-la-ysG"/>
-                            <constraint firstItem="scn-pR-G8W" firstAttribute="leading" secondItem="OrH-K3-vQp" secondAttribute="leading" id="a0u-Se-WXU"/>
+                            <constraint firstItem="scn-pR-G8W" firstAttribute="leading" secondItem="OrH-K3-vQp" secondAttribute="leading" constant="23" id="a0u-Se-WXU"/>
                             <constraint firstItem="6Ug-rY-oG2" firstAttribute="trailing" secondItem="71G-mP-b2m" secondAttribute="trailing" id="iyi-by-UnM"/>
                             <constraint firstItem="6Ug-rY-oG2" firstAttribute="leading" secondItem="dak-lx-7x4" secondAttribute="leading" id="jpV-68-lmP"/>
                             <constraint firstAttribute="trailing" secondItem="3Bg-Ki-PwV" secondAttribute="trailing" constant="173" id="ldW-7P-LKG"/>
