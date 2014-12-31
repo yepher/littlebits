@@ -13,6 +13,7 @@
 #import "YFRDevice.h"
 #import "YFRAccessPoint.h"
 #import "YFROutputRequest.h"
+#import "YFRGetDeviceInfo.h"
 
 @interface ViewController ()
 
@@ -71,6 +72,10 @@
     
 }
 
+- (void) onDeviceUpdate:(NSDictionary *)deviceInfo {
+    NSNumber* value = [deviceInfo valueForKey:@"percent"];
+    [self.cloudLevelOutput setIntegerValue:[value integerValue]];
+}
 
 #pragma mark - Cloud Bit Controls
 
@@ -113,6 +118,12 @@
     [httpHelper doRequest: request];
 }
 
+- (IBAction)monitorDevice:(id)sender {
+    YFRGetDeviceInfo* request = [YFRGetDeviceInfo new];
+    request.device = self.selectedDevice;
+    request.delegate = self;
+    [request doRequest];
+}
 
 #pragma mark - NSOutlineView Delegates
 

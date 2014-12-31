@@ -12,6 +12,8 @@
 
 @interface YFRConstants : NSObject
 
+extern NSString* const SERVER_URL;
+
 extern NSString * const PREF_TOKEN_KEY;
 
 extern NSString* const HTTP_HEADER_AUTHORIZATION;

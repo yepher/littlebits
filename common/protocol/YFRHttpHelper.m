@@ -11,8 +11,6 @@
 #import "GCDAsyncSocket.h"
 #import "YFRBaseRequest.h"
 
-static NSString* const SERVER_URL = @"https://api-http.littlebitscloud.cc";
-
 @interface YFRHttpHelper ()
 
 

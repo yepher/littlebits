@@ -795,18 +795,28 @@
                                 </scroller>
                             </scrollView>
                             <slider verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="6Ug-rY-oG2">
-                                <rect key="frame" x="331" y="125" width="114" height="20"/>
+                                <rect key="frame" x="331" y="158" width="114" height="20"/>
                                 <sliderCell key="cell" state="on" alignment="left" maxValue="99" doubleValue="50" tickMarkPosition="above" sliderType="linear" id="QB9-sd-0Kr"/>
                                 <connections>
                                     <action selector="onSliderInput:" target="XfG-lQ-9wD" id="qjf-Gb-dmB"/>
                                 </connections>
                             </slider>
                             <levelIndicator verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="71G-mP-b2m">
-                                <rect key="frame" x="333" y="68" width="110" height="16"/>
+                                <rect key="frame" x="333" y="20" width="110" height="16"/>
                                 <levelIndicatorCell key="cell" alignment="left" doubleValue="50" maxValue="99" warningValue="2" criticalValue="2" levelIndicatorStyle="continuousCapacity" id="5os-Kg-hgt"/>
                             </levelIndicator>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Y1R-ur-eWD">
+                                <rect key="frame" x="327" y="40" width="122" height="32"/>
+                                <buttonCell key="cell" type="push" title="Monitor" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="txO-nf-vB5">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="monitorDevice:" target="XfG-lQ-9wD" id="Iis-sq-cvN"/>
+                                </connections>
+                            </button>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="dak-lx-7x4">
-                                <rect key="frame" x="327" y="91" width="122" height="32"/>
+                                <rect key="frame" x="327" y="118" width="122" height="32"/>
                                 <buttonCell key="cell" type="push" title="Trigger" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="DAn-hP-hHP">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
@@ -822,19 +832,19 @@
                             <constraint firstItem="3Bg-Ki-PwV" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="11" id="2Gj-Up-Fn3"/>
                             <constraint firstItem="scn-pR-G8W" firstAttribute="top" secondItem="OrH-K3-vQp" secondAttribute="bottom" constant="3" id="3ro-dd-0WX"/>
                             <constraint firstItem="6Ug-rY-oG2" firstAttribute="trailing" secondItem="dak-lx-7x4" secondAttribute="trailing" id="7Xh-9z-TNJ"/>
-                            <constraint firstItem="6Ug-rY-oG2" firstAttribute="top" secondItem="qvi-KI-qck" secondAttribute="bottom" constant="63" id="8jB-Eo-eJ4"/>
+                            <constraint firstItem="6Ug-rY-oG2" firstAttribute="top" secondItem="qvi-KI-qck" secondAttribute="bottom" constant="30" id="8jB-Eo-eJ4"/>
                             <constraint firstItem="6Ug-rY-oG2" firstAttribute="trailing" secondItem="qvi-KI-qck" secondAttribute="trailing" id="AA5-Uw-2lG"/>
                             <constraint firstItem="qvi-KI-qck" firstAttribute="leading" secondItem="scn-pR-G8W" secondAttribute="trailing" constant="15" id="ES8-fC-lm9"/>
                             <constraint firstItem="3Bg-Ki-PwV" firstAttribute="top" secondItem="scn-pR-G8W" secondAttribute="bottom" constant="12" id="Eh2-o8-F8f"/>
                             <constraint firstAttribute="bottom" secondItem="3Bg-Ki-PwV" secondAttribute="bottom" constant="20" id="JNR-V5-WRD"/>
                             <constraint firstItem="71G-mP-b2m" firstAttribute="leading" secondItem="3Bg-Ki-PwV" secondAttribute="trailing" constant="26" id="M1G-25-dyw"/>
-                            <constraint firstItem="71G-mP-b2m" firstAttribute="top" secondItem="dak-lx-7x4" secondAttribute="bottom" constant="14" id="Pdo-Nq-rWz"/>
+                            <constraint firstItem="71G-mP-b2m" firstAttribute="top" secondItem="dak-lx-7x4" secondAttribute="bottom" constant="89" id="Pdo-Nq-rWz"/>
                             <constraint firstItem="scn-pR-G8W" firstAttribute="top" secondItem="qvi-KI-qck" secondAttribute="top" id="VIK-la-ysG"/>
                             <constraint firstItem="scn-pR-G8W" firstAttribute="leading" secondItem="OrH-K3-vQp" secondAttribute="leading" id="a0u-Se-WXU"/>
                             <constraint firstItem="6Ug-rY-oG2" firstAttribute="trailing" secondItem="71G-mP-b2m" secondAttribute="trailing" id="iyi-by-UnM"/>
                             <constraint firstItem="6Ug-rY-oG2" firstAttribute="leading" secondItem="dak-lx-7x4" secondAttribute="leading" id="jpV-68-lmP"/>
                             <constraint firstAttribute="trailing" secondItem="3Bg-Ki-PwV" secondAttribute="trailing" constant="173" id="ldW-7P-LKG"/>
-                            <constraint firstItem="dak-lx-7x4" firstAttribute="top" secondItem="6Ug-rY-oG2" secondAttribute="bottom" constant="8" id="oAF-wC-HWA"/>
+                            <constraint firstItem="dak-lx-7x4" firstAttribute="top" secondItem="6Ug-rY-oG2" secondAttribute="bottom" constant="14" id="oAF-wC-HWA"/>
                         </constraints>
                     </view>
                     <connections>

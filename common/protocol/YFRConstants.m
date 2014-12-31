@@ -10,6 +10,8 @@
 
 @implementation YFRConstants
 
+NSString* const SERVER_URL = @"https://api-http.littlebitscloud.cc";
+
 NSString * const PREF_TOKEN_KEY = @"TOKEN";
 
 NSString* const HTTP_HEADER_AUTHORIZATION = @"Authorization";

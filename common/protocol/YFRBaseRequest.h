@@ -13,6 +13,7 @@ typedef NS_ENUM(NSInteger, YFRRequestType) {
     YFR_REQUEST_TYPE_PUT,
     YFR_REQUEST_TYPE_POST,
     YFR_REQUEST_TYPE_DELETE,
+     YFR_REQUEST_TYPE_INTERNAL,
 };
 
 @interface YFRBaseRequest : NSObject
