@@ -12,9 +12,10 @@ This project is for connecting to the CloudBit made By [LittleBits](http://littl
 
 #### References
 
-* [Access API](http://developer.littlebitscloud.cc/access) 
-* [HTTP API](http://developer.littlebitscloud.cc/api-http)
-* [API Examples](https://github.com/littlebits/cloud-api-lessons)
+* My API Notes [API Notes](https://github.com/yepher/littlebits/blob/master/CloudBit_ProtocolNotes.md)
+* LittleBits API [Access API](http://developer.littlebitscloud.cc/access) 
+* LittleBits API [HTTP API](http://developer.littlebitscloud.cc/api-http)
+* Littlebits API [API Examples](https://github.com/littlebits/cloud-api-lessons)
 
 #### Project Layout
 

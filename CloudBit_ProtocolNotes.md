@@ -83,12 +83,77 @@ Cache-Control: no-cache
 
 ````
 
+### Scan WiFi
+
+This is done while the CloubBit is acting as a WiFi access point.
+
+#### Request
+
+`````
+GET /scan-wifi/ HTTP/1.1
+Host: cloudsetup.cc
+Safari/537.36
+Accept: */*
+Referer: http://cloudsetup.cc/
+Accept-Encoding: gzip, deflate, sdch
+Accept-Language: en-US,en;q=0.8,es;q=0.6
+Pragma: no-cache
+Cache-Control: no-cache
+
+`````
+
+#### Response
+
+`````
+HTTP/1.1 200 OK
+Access-Control-Allow-Headers: Authorization, Content-Type, If-None-Match
+Access-Control-Allow-Methods: GET, HEAD, POST, PUT, DELETE, OPTIONS
+Access-Control-Allow-Origin: *
+Access-Control-Expose-Headers: WWW-Authenticate, Server-Authorization
+Access-Control-Max-Age: 86400
+Content-Type: application/json; charset=utf-8
+Transfer-Encoding: chunked
+Date: Sun, 28 Dec 2014 23:38:04 GMT
+Server: lighttpd/1.4.35
+Expires: 0
+Cache-Control: no-cache
+
+{"survey": {
+	"accessPoints":
+		[
+			{
+				"ssid": "AccessPointName",
+				"mac": "000000000000",
+				"security": "wpa2",
+				"encryption": "on"
+			},
+			{
+				"ssid": "AnotherAccessPoint",
+				"mac": "111111111111",
+				"security": "wpa2",
+				"encryption": "on"
+			}
+		]
+	}
+}
+
+`````
+
 
 ### Set WiFi
 
 This is done while CloudBit is acting as a WiFi access point
 
 #### Request
+
+| Field | type | example | description |
+|---|---|---|---|
+| ssid | String | AbcAccessPoint | The SSID of the access point to connect to|
+| mac | String | | |
+| security | String | | They of encryption that the access point uses |
+| encryption | Bool | on | "on" or "off" |
+| password | String | | Key for the access point |
+
 
 `````
 POST /set-wifi/ HTTP/1.1
