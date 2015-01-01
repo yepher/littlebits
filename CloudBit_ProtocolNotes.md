@@ -26,9 +26,13 @@ If you unplug the USB WiFI adapter and plug it into your mack you can get the Se
 
 ![RealTec](http://pingbin.com/wp-content/uploads/2012/12/jpeg-300x253.)
 
+* Driver: rtl871xdrv
+
 ### Idntify Device
 
 This is done while the CloubBit is acting as a WiFi access point.
+
+see: SDCARD/srv/http/identify/index.cgi
 
 #### Request
 
@@ -49,8 +53,8 @@ Cache-Control: no-cache
 | Field | type | example | description |
 |---|---|---|---|
 | id | String | 000000000000 |This appears to be derived from MAC address|
-| mac | String | 000000000000 |WiFi MAC address|
-| hash | String | ABCDEF012345677889 |I assume this is some sort of MD5(mac) hopefully security is not built on this|
+| mac | String | 000000000000 |WiFi MAC address `/var/lb/mac`|
+| hash | String | ABCDEF012345677889 |I assume this is some sort of MD5(mac) hopefully security is not built on this `/var/lb/id`|
 | firmware | String | 1.0.140611a | |
 | device | String | littlebits-module-cloud | |
 | protocol_version | String | 1.1.0 | |
@@ -86,6 +90,8 @@ Cache-Control: no-cache
 ### Scan WiFi
 
 This is done while the CloubBit is acting as a WiFi access point.
+
+see: cloudbit_fs/srv/http/scan-wifi/index.cgi 
 
 #### Request
 
@@ -143,6 +149,8 @@ Cache-Control: no-cache
 ### Set WiFi
 
 This is done while CloudBit is acting as a WiFi access point
+
+See: /cloudbit_fs/srv/http/set-wifi/index.cgi
 
 #### Request
 

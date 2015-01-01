@@ -75,19 +75,22 @@
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection
 {
     NSLog(@"%s", __FUNCTION__);
+    if (self.delegate != nil) {
+        [self.delegate onMontorEndedForDevice:self.device];
+    }
 }
 
 /**
  Unfortunetly this api does not return valid JSON so we have to sanatize it before parsing
  **/
 - (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data {
-    // TODO: this is not correct at all. This code should accumulate responses and only parse complete parts
+    // TODO: this is not correct at all. This code should accumulate responses and only parse complete chunks
     
     NSData* dataToParse = data;
     NSString *dataString = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
     NSString *prefixToRemove = @"data:";
-    NSString *newString = [dataString copy];
     if ([dataString hasPrefix:prefixToRemove]) {
+        NSString *newString = [dataString copy];
         newString = [dataString substringFromIndex:[prefixToRemove length]];
         dataToParse = [newString dataUsingEncoding:NSUTF8StringEncoding];
     }
@@ -115,26 +118,5 @@
     
     [NSURLConnection connectionWithRequest:request delegate:self];
 }
-
-//- (id)getJsonResponse:(NSData *)jsonData withContentType:(NSString *)contentType {
-//    id jsonResponse = nil;
-//    
-//    if (jsonData != nil && ([contentType hasPrefix:CONTENT_TYPE_JSON] || contentType == nil)) {
-//        NSError *jsonError = nil;
-//        jsonResponse = [NSJSONSerialization JSONObjectWithData:jsonData options:NSJSONReadingMutableContainers error:&jsonError];
-//        if (jsonError != nil) {
-//            jsonResponse = nil;
-//            NSString *receivedJsonString = [NSString stringWithUTF8String:[jsonData bytes]];
-//            NSLog(@"%s Failed to parse JSON, because %@, json=%@", __FUNCTION__, jsonError, receivedJsonString);
-//        }
-//    }
-//    else if (jsonData != nil) {
-//        NSLog(@"WARN: API not returning Content-Type: application/json! instead returning: %@", contentType);
-//        return [self getJsonResponse:jsonData withContentType:nil];
-//    }
-//    return jsonResponse;
-//}
-
-
 
 @end

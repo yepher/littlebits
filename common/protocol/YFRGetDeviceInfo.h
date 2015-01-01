@@ -15,6 +15,8 @@
 
 - (void) onDeviceUpdate:(NSDictionary*) deviceInfo;
 
+- (void) onMontorEndedForDevice:(YFRDevice*) device;
+
 @end
 
 @interface YFRGetDeviceInfo : YFRBaseRequest <NSURLConnectionDataDelegate>

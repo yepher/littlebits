@@ -13,6 +13,7 @@
 @interface YFRConstants : NSObject
 
 extern NSString* const SERVER_URL;
+extern NSString* const CLOUD_BIT_URL;
 
 extern NSString * const PREF_TOKEN_KEY;
 

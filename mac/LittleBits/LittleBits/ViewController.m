@@ -24,6 +24,8 @@
 @property (weak) IBOutlet NSButton *cloudButtonInput;
 @property (weak) IBOutlet NSLevelIndicator *cloudLevelOutput;
 
+@property BOOL isMonitoringDevice;
+
 @property NSArray* devices;
 
 @property YFRDevice* selectedDevice;
@@ -38,7 +40,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    self.isMonitoringDevice = NO;
     self.devices = [NSArray array];
     
     NSString* tokenVal = [[NSUserDefaults standardUserDefaults] valueForKey:PREF_TOKEN_KEY];
@@ -76,9 +78,16 @@
     
 }
 
+#pragma mark - YFRDeviceInfoDelegate
+
 - (void) onDeviceUpdate:(NSDictionary *)deviceInfo {
     NSNumber* value = [deviceInfo valueForKey:@"percent"];
     [self.cloudLevelOutput setIntegerValue:[value integerValue]];
+}
+
+- (void) onMontorEndedForDevice:(YFRDevice*) device {
+    NSLog(@"%s", __PRETTY_FUNCTION__);
+    self.isMonitoringDevice = NO;
 }
 
 #pragma mark - Cloud Bit Controls
@@ -106,6 +115,7 @@
     
 }
 
+// TODO: web version appears to send two commands. One on button down and the other on button up
 - (IBAction)onButtonInput:(id)sender {
     NSLog(@"%s", __PRETTY_FUNCTION__);
     
@@ -123,6 +133,11 @@
 }
 
 - (IBAction)monitorDevice:(id)sender {
+    if (self.isMonitoringDevice) {
+        NSLog(@"Ingore monitor since monitor is already running.");
+        return;
+    }
+    self.isMonitoringDevice = YES;
     YFRGetDeviceInfo* request = [YFRGetDeviceInfo new];
     request.device = self.selectedDevice;
     request.delegate = self;

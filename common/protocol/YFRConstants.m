@@ -11,6 +11,7 @@
 @implementation YFRConstants
 
 NSString* const SERVER_URL = @"https://api-http.littlebitscloud.cc";
+NSString* const CLOUD_BIT_URL = @"http://cloudsetup.cc";
 
 NSString * const PREF_TOKEN_KEY = @"TOKEN";
 
