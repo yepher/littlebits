@@ -7,6 +7,7 @@
 //
 
 #import "YFRBaseRequest.h"
+#import "YFRConstants.h"
 
 
 
@@ -33,6 +34,14 @@
     NSLog(@"ERROR: %s must be overridden", __PRETTY_FUNCTION__);
     NSAssert(NO, @"must override method");
     return;
+}
+
+- (NSString*) server {
+    return SERVER_URL;
+}
+
+- (BOOL) requiresAuth {
+    return YES;
 }
 
 @end

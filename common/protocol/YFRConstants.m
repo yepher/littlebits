@@ -19,5 +19,7 @@ NSString* const HTTP_HEADER_AUTHORIZATION = @"Authorization";
 NSString* const CONTENT_TYPE = @"Content-Type";
 NSString* const CONTENT_TYPE_JSON = @"application/json";
 
+NSString* const ACCEPT_TYPE_V2 = @"application/vnd.littlebits.v2+json";
+
 
 @end

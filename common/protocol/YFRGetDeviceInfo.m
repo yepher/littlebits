@@ -8,6 +8,7 @@
 
 #import "YFRGetDeviceInfo.h"
 #import "YFRConstants.h"
+#import "YFRHttpHelper.h"
 #import "YFRDevice.h"
 
 /**
@@ -91,7 +92,7 @@
         dataToParse = [newString dataUsingEncoding:NSUTF8StringEncoding];
     }
     
-    NSDictionary* response = [self getJsonResponse:dataToParse withContentType:nil];
+    NSDictionary* response = [YFRHttpHelper getJsonResponse:dataToParse withContentType:nil];
     NSLog(@"Got: %@", response);
     
     if (self.delegate != nil) {
@@ -105,53 +106,34 @@
 
 - (void) doRequest {
     
-    NSString *requestStr = [NSString stringWithFormat:@"%@%@",SERVER_URL, [self requestPath]];
-    if (requestStr == nil) {
-        NSLog(@"no request URL!");
+    NSMutableURLRequest *request;
+    request = [YFRHttpHelper buildRequest:self];
+    
+    if (request == nil) {
         return;
     }
     
-    NSURL *requestUrl = [NSURL URLWithString:requestStr];
-    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:requestUrl];
-    
-    NSMutableDictionary *headers = [NSMutableDictionary new];
-    
-    NSString* userToken = [[NSUserDefaults standardUserDefaults] valueForKey:PREF_TOKEN_KEY];
-    
-    // add standard headers
-    NSString* token = [NSString stringWithFormat:@"Bearer %@", userToken];
-    [headers setObject:token forKey:HTTP_HEADER_AUTHORIZATION];
-    
-    [headers enumerateKeysAndObjectsUsingBlock:^(NSString *key, NSString *value, BOOL *stop) {
-        // add header
-        [request setValue:value forHTTPHeaderField:key];
-    }];
-    
-    [request setValue:CONTENT_TYPE_JSON forHTTPHeaderField:CONTENT_TYPE];
-    //[request setValue:@"application/vnd.littlebits.v2+json" forKey:@"Accept"];
-    
     [NSURLConnection connectionWithRequest:request delegate:self];
-    
 }
 
-- (id)getJsonResponse:(NSData *)jsonData withContentType:(NSString *)contentType {
-    id jsonResponse = nil;
-    
-    if (jsonData != nil && ([contentType hasPrefix:CONTENT_TYPE_JSON] || contentType == nil)) {
-        NSError *jsonError = nil;
-        jsonResponse = [NSJSONSerialization JSONObjectWithData:jsonData options:NSJSONReadingMutableContainers error:&jsonError];
-        if (jsonError != nil) {
-            jsonResponse = nil;
-            NSString *receivedJsonString = [NSString stringWithUTF8String:[jsonData bytes]];
-            NSLog(@"%s Failed to parse JSON, because %@, json=%@", __FUNCTION__, jsonError, receivedJsonString);
-        }
-    }
-    else if (jsonData != nil) {
-        NSLog(@"WARN: API not returning Content-Type: application/json! instead returning: %@", contentType);
-        return [self getJsonResponse:jsonData withContentType:nil];
-    }
-    return jsonResponse;
-}
+//- (id)getJsonResponse:(NSData *)jsonData withContentType:(NSString *)contentType {
+//    id jsonResponse = nil;
+//    
+//    if (jsonData != nil && ([contentType hasPrefix:CONTENT_TYPE_JSON] || contentType == nil)) {
+//        NSError *jsonError = nil;
+//        jsonResponse = [NSJSONSerialization JSONObjectWithData:jsonData options:NSJSONReadingMutableContainers error:&jsonError];
+//        if (jsonError != nil) {
+//            jsonResponse = nil;
+//            NSString *receivedJsonString = [NSString stringWithUTF8String:[jsonData bytes]];
+//            NSLog(@"%s Failed to parse JSON, because %@, json=%@", __FUNCTION__, jsonError, receivedJsonString);
+//        }
+//    }
+//    else if (jsonData != nil) {
+//        NSLog(@"WARN: API not returning Content-Type: application/json! instead returning: %@", contentType);
+//        return [self getJsonResponse:jsonData withContentType:nil];
+//    }
+//    return jsonResponse;
+//}
 
 
 

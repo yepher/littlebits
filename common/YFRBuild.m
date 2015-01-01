@@ -23,13 +23,13 @@ NSString *const YFR_VERSION = @"1.0"
 #endif
 ;
 
-NSString *const YFR_BUILD_VERSION = @"14";
+NSString *const YFR_BUILD_VERSION = @"15";
 
-NSString *const YFR_GIT_HASH = @"f6c00396a9221646c39f7fc97fe2d8b24a6baed7";
+NSString *const YFR_GIT_HASH = @"ad8f676eb03c36491ba1459349574c8f3b308602";
 
-NSString *const YFR_GIT_LAST = @"Tue Dec 30 22:23:18 2014 -0600";
+NSString *const YFR_GIT_LAST = @"Wed Dec 31 19:03:34 2014 -0600";
 
-NSString *const YFR_BUILD_DATE = @"Wed Dec 31 15:00:54 UTC 2014";
+NSString *const YFR_BUILD_DATE = @"Thu Jan  1 02:52:19 UTC 2015";
 
 
 

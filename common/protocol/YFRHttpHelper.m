@@ -19,39 +19,51 @@
 @implementation YFRHttpHelper
 
 
-- (void) doRequest:(YFRBaseRequest*) requestObj {
-    
-    NSString *requestStr = [NSString stringWithFormat:@"%@%@",SERVER_URL, [requestObj requestPath]];
++ (NSMutableURLRequest *)buildRequest:(YFRBaseRequest *)requestObj {
+    NSString *requestStr = [NSString stringWithFormat:@"%@%@",[requestObj server], [requestObj requestPath]];
     if (requestStr == nil) {
         NSLog(@"no request URL!");
-        return;
+        return nil;
     }
     
     NSURL *requestUrl = [NSURL URLWithString:requestStr];
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:requestUrl];
     
     NSMutableDictionary *headers = [NSMutableDictionary new];
-
+    
     NSString* userToken = [[NSUserDefaults standardUserDefaults] valueForKey:PREF_TOKEN_KEY];
     
     // add standard headers
-    NSString* token = [NSString stringWithFormat:@"Bearer %@", userToken];
-    [headers setObject:token forKey:HTTP_HEADER_AUTHORIZATION];
-
+    if ([requestObj requiresAuth]) {
+        NSString* token = [NSString stringWithFormat:@"Bearer %@", userToken];
+        [headers setObject:token forKey:HTTP_HEADER_AUTHORIZATION];
+    }
+    
+    [headers setValue:ACCEPT_TYPE_V2 forKey:@"Accept"];
+    
     [headers enumerateKeysAndObjectsUsingBlock:^(NSString *key, NSString *value, BOOL *stop) {
         // add header
         [request setValue:value forHTTPHeaderField:key];
     }];
     
     [request setValue:CONTENT_TYPE_JSON forHTTPHeaderField:CONTENT_TYPE];
-    //[request setValue:@"application/vnd.littlebits.v2+json" forKey:@"Accept"];
-    //Accept: application/vnd.littlebits.v2+json
     
     if ([requestObj requestType] == YFR_REQUEST_TYPE_POST) {
         NSString *requestData = [requestObj requestBody];
         [request setHTTPMethod:@"POST"];
         [request setHTTPBody:[requestData dataUsingEncoding:NSUTF8StringEncoding]];
+        
+    }
+    return request;
+}
 
+- (void) doRequest:(YFRBaseRequest*) requestObj {
+    
+    NSMutableURLRequest *request;
+    request = [YFRHttpHelper buildRequest:requestObj];
+    
+    if (request == nil) {
+        return;
     }
     
     NSHTTPURLResponse *response;
@@ -66,7 +78,7 @@
         // Get JSON result (server sends back JSON response for several non-200 status codes)
         NSString *contentType = [[[response allHeaderFields] valueForKey:CONTENT_TYPE] lowercaseString];
         if ([contentType rangeOfString:@"json"].location != NSNotFound) {
-            id jsonResponse = [self getJsonResponse:result withContentType:contentType];
+            id jsonResponse = [YFRHttpHelper getJsonResponse:result withContentType:contentType];
 
             NSLog(@"JsonResponse: %@", jsonResponse);
             [requestObj handleResponse:jsonResponse];
@@ -77,7 +89,7 @@
     
 }
 
-- (id)getJsonResponse:(NSData *)jsonData withContentType:(NSString *)contentType {
++ (id)getJsonResponse:(NSData *)jsonData withContentType:(NSString *)contentType {
     id jsonResponse = nil;
     
     if (jsonData != nil && ([contentType hasPrefix:CONTENT_TYPE_JSON] || contentType == nil)) {

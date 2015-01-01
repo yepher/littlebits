@@ -23,5 +23,7 @@ typedef NS_ENUM(NSInteger, YFRRequestType) {
 - (YFRRequestType) requestType;
 
 - (void) handleResponse:(id) response;
+- (NSString*) server;
+- (BOOL) requiresAuth;
 
 @end

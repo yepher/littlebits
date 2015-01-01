@@ -14,4 +14,7 @@
 
 - (void) doRequest:(YFRBaseRequest*) request;
 
++ (NSMutableURLRequest *)buildRequest:(YFRBaseRequest *)requestObj;
++ (id)getJsonResponse:(NSData *)jsonData withContentType:(NSString *)contentType;
+
 @end

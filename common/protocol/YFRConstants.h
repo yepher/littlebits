@@ -20,5 +20,6 @@ extern NSString* const HTTP_HEADER_AUTHORIZATION;
 
 extern NSString* const CONTENT_TYPE;
 extern NSString* const CONTENT_TYPE_JSON;
+extern NSString* const ACCEPT_TYPE_V2;
 
 @end
