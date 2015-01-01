@@ -45,9 +45,11 @@
     device.subscriptions = [response objectForKey:@"subscriptions"];
     device.subscribers = [response objectForKey:@"subscribers"];
     
-    NSDictionary* apDict = [response objectForKey:@"ap"];
-    YFRAccessPoint* accessPoint = [YFRAccessPoint parse:apDict];
-    device.accessPoint = accessPoint;
+    id apDict = [response objectForKey:@"ap"];
+    if ([NSNull null] != apDict ) {
+        YFRAccessPoint* accessPoint = [YFRAccessPoint parse:apDict];
+        device.accessPoint = accessPoint;
+    }
     
     return device;
 }

@@ -36,6 +36,10 @@
 		83DB83D21A537C0E004B7DCA /* YFROutputRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 83DB83D01A537C0E004B7DCA /* YFROutputRequest.m */; };
 		83DB83D51A539152004B7DCA /* YFRGetDeviceInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 83DB83D41A539152004B7DCA /* YFRGetDeviceInfo.m */; };
 		83DB83D61A539152004B7DCA /* YFRGetDeviceInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 83DB83D41A539152004B7DCA /* YFRGetDeviceInfo.m */; };
+		83DB83D91A5441B8004B7DCA /* YFRBuild.m in Sources */ = {isa = PBXBuildFile; fileRef = 83DB83D81A5441B8004B7DCA /* YFRBuild.m */; };
+		83DB83DA1A5441B8004B7DCA /* YFRBuild.m in Sources */ = {isa = PBXBuildFile; fileRef = 83DB83D81A5441B8004B7DCA /* YFRBuild.m */; };
+		83DB83DE1A544653004B7DCA /* YFRLittleBitsApplication.m in Sources */ = {isa = PBXBuildFile; fileRef = 83DB83DD1A544653004B7DCA /* YFRLittleBitsApplication.m */; };
+		83DB83DF1A544653004B7DCA /* YFRLittleBitsApplication.m in Sources */ = {isa = PBXBuildFile; fileRef = 83DB83DD1A544653004B7DCA /* YFRLittleBitsApplication.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,6 +92,10 @@
 		83DB83D01A537C0E004B7DCA /* YFROutputRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YFROutputRequest.m; sourceTree = "<group>"; };
 		83DB83D31A539152004B7DCA /* YFRGetDeviceInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YFRGetDeviceInfo.h; sourceTree = "<group>"; };
 		83DB83D41A539152004B7DCA /* YFRGetDeviceInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YFRGetDeviceInfo.m; sourceTree = "<group>"; };
+		83DB83D71A5441B8004B7DCA /* YFRBuild.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YFRBuild.h; sourceTree = "<group>"; };
+		83DB83D81A5441B8004B7DCA /* YFRBuild.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YFRBuild.m; sourceTree = "<group>"; };
+		83DB83DC1A544653004B7DCA /* YFRLittleBitsApplication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YFRLittleBitsApplication.h; sourceTree = "<group>"; };
+		83DB83DD1A544653004B7DCA /* YFRLittleBitsApplication.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YFRLittleBitsApplication.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,14 +142,16 @@
 		83D8491D1A522FDA00D2BE00 /* LittleBits */ = {
 			isa = PBXGroup;
 			children = (
+				83D8491E1A522FDA00D2BE00 /* Supporting Files */,
+				83D8492B1A522FDA00D2BE00 /* Images.xcassets */,
+				83D849281A522FDA00D2BE00 /* LittleBits.xcdatamodeld */,
 				83D849201A522FDA00D2BE00 /* AppDelegate.h */,
 				83D849211A522FDA00D2BE00 /* AppDelegate.m */,
+				83D8492D1A522FDA00D2BE00 /* Main.storyboard */,
 				83D849251A522FDA00D2BE00 /* ViewController.h */,
 				83D849261A522FDA00D2BE00 /* ViewController.m */,
-				83D8492B1A522FDA00D2BE00 /* Images.xcassets */,
-				83D8492D1A522FDA00D2BE00 /* Main.storyboard */,
-				83D849281A522FDA00D2BE00 /* LittleBits.xcdatamodeld */,
-				83D8491E1A522FDA00D2BE00 /* Supporting Files */,
+				83DB83DC1A544653004B7DCA /* YFRLittleBitsApplication.h */,
+				83DB83DD1A544653004B7DCA /* YFRLittleBitsApplication.m */,
 			);
 			path = LittleBits;
 			sourceTree = "<group>";
@@ -176,6 +186,8 @@
 		83D849441A52346800D2BE00 /* common */ = {
 			isa = PBXGroup;
 			children = (
+				83DB83D71A5441B8004B7DCA /* YFRBuild.h */,
+				83DB83D81A5441B8004B7DCA /* YFRBuild.m */,
 				83D849621A52537600D2BE00 /* external */,
 				83D849481A52358D00D2BE00 /* data */,
 				83D849491A52358D00D2BE00 /* protocol */,
@@ -251,6 +263,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 83D8493E1A522FDB00D2BE00 /* Build configuration list for PBXNativeTarget "LittleBits" */;
 			buildPhases = (
+				83DB83DB1A54424B004B7DCA /* Update YFRBuild.m */,
 				4409A73F4A712876FD8719F3 /* Check Pods Manifest.lock */,
 				83D849171A522FDA00D2BE00 /* Sources */,
 				83D849181A522FDA00D2BE00 /* Frameworks */,
@@ -373,6 +386,20 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
+		83DB83DB1A54424B004B7DCA /* Update YFRBuild.m */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Update YFRBuild.m";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "#!/bin/bash\n\n# This script automatically sets the version and short version string of\n# an Xcode project from the Git repository containing the project.\n#\n# To use this script in Xcode 6, add the contents to a \"Run Script\" build\n# phase for your application target.\n\nset -o errexit\nset -o nounset\n\n# Get the original YFRBuild from git\n#git checkout \"$SRCROOT/../../common/YFRBuild.m.template\"\n\ncp -f \"$SRCROOT/../../common/YFRBuild.m.template\" \"$SRCROOT/../../common/YFRBuild.m\"\n\n# Populate GIT Hash\nGIT_HASH=$(git --git-dir=\"${PROJECT_DIR}/../../.git\" --work-tree=\"${PROJECT_DIR}\" rev-parse HEAD)\necho \"GIT_HASH: $GIT_HASH\"\nsed -i -e \"s/BUILD_GENERATED_GIT_HASH/$GIT_HASH/g\" \"$SRCROOT/../../common/YFRBuild.m\"\n\n# Populate last commit date and branch name\n\nGIT_LAST_COMMIT=$(git log -1 --format=%cd)\necho \"GIT_LAST_COMMIT: $GIT_LAST_COMMIT\"\n\n#echo \"before branch\"\n#GIT_BANCH_NAME=$(git --git-dir=\"${PROJECT_DIR}/.git\" --work-tree=\"${PROJECT_DIR}\" symbolic-ref --short HEAD)\n#echo \"after branch\"\n#echo \"GIT_BANCH_NAME: $GIT_BANCH_NAME\"\n\nsed -i -e \"s/BUILD_LAST_COMMIT/$GIT_LAST_COMMIT/g\" \"$SRCROOT/../../common/YFRBuild.m\"\n\n\nBUILD_DATE=`date -u`\nsed -i -e \"s/BUILD_GENERATED_DATE/$BUILD_DATE/g\" \"$SRCROOT/../../common/YFRBuild.m\"\n\n\nBUILD_VERSION=`git rev-list HEAD --count`\nsed -i -e \"s/BUILD_GENERATED_VERSION/$BUILD_VERSION/g\" \"$SRCROOT/../../common/YFRBuild.m\"\n\n# Write APP_VERSION in MFLBuild.m from CFBundleShortVersionString in info.plist\necho \"Read Plist: ${PROJECT_DIR}/Info.plist\"\nAPP_VERSION=`/usr/libexec/PlistBuddy -c \"print :CFBundleShortVersionString\" \"${PROJECT_DIR}/LittleBits/Info.plist\"`\necho \"APP_VERSION: $APP_VERSION\"\nsed -i -e \"s/APP_VERSION/$APP_VERSION/g\" \"$SRCROOT/../../common/YFRBuild.m\"\n\n\n";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -390,6 +417,8 @@
 				83D849241A522FDA00D2BE00 /* main.m in Sources */,
 				83D849221A522FDA00D2BE00 /* AppDelegate.m in Sources */,
 				83D849651A52537600D2BE00 /* GCDAsyncSocket.m in Sources */,
+				83DB83DE1A544653004B7DCA /* YFRLittleBitsApplication.m in Sources */,
+				83DB83D91A5441B8004B7DCA /* YFRBuild.m in Sources */,
 				83D849581A52383D00D2BE00 /* YFRGetDevices.m in Sources */,
 				83D8492A1A522FDA00D2BE00 /* LittleBits.xcdatamodeld in Sources */,
 				83DB83D51A539152004B7DCA /* YFRGetDeviceInfo.m in Sources */,
@@ -401,6 +430,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				83DB83DA1A5441B8004B7DCA /* YFRBuild.m in Sources */,
 				83DB83D21A537C0E004B7DCA /* YFROutputRequest.m in Sources */,
 				83D849551A52382300D2BE00 /* YFRBaseRequest.m in Sources */,
 				83DB83CB1A534BA9004B7DCA /* YFRLittleBitsClient.m in Sources */,
@@ -408,6 +438,7 @@
 				83D8493B1A522FDB00D2BE00 /* LittleBitsTests.m in Sources */,
 				83D849591A52383D00D2BE00 /* YFRGetDevices.m in Sources */,
 				83D8494D1A5235D700D2BE00 /* YFRDevice.m in Sources */,
+				83DB83DF1A544653004B7DCA /* YFRLittleBitsApplication.m in Sources */,
 				83D8495D1A5238E600D2BE00 /* YFRHttpHelper.m in Sources */,
 				83DB83D61A539152004B7DCA /* YFRGetDeviceInfo.m in Sources */,
 			);

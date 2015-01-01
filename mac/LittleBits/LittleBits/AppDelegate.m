@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "YFRBuild.h"
 
 @interface AppDelegate ()
 
@@ -174,5 +175,6 @@
 
     return NSTerminateNow;
 }
+
 
 @end

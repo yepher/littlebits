@@ -20,5 +20,6 @@ Pods/
 Podfile.lock
 
 YFRBuild.m-e
+YFRBuild.m
 authtoken.txt
 
