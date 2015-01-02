@@ -16,7 +16,7 @@ This project is for connecting to the CloudBit made By [LittleBits](http://littl
 * LittleBits API [Access API](http://developer.littlebitscloud.cc/access) 
 * LittleBits API [HTTP API](http://developer.littlebitscloud.cc/api-http)
 * Littlebits API [API Examples](https://github.com/littlebits/cloud-api-lessons)
-* Enable SSHD on CloudBit [CloudBit File System](https://github.com/yepher/littlebits/blob/master/CloudBit_ProtocolNotes.md)
+* Enable SSHD on CloudBit [CloudBit File System](https://github.com/yepher/littlebits/blob/master/CloubitFileSystem.md)
 
 #### Project Layout
 
