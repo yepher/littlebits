@@ -46,6 +46,10 @@ To use the Mac App:
 
 ![Main Window](https://raw.githubusercontent.com/yepher/littlebits/master/design/screen/mainScreen.png)
 
+![RobotArm](https://raw.githubusercontent.com/yepher/littlebits/master/design/screen/robotArm.png)
+
+![Number Display](https://raw.githubusercontent.com/yepher/littlebits/master/design/screen/021Number.png)
+
 ### iOS App
 
 TODO
