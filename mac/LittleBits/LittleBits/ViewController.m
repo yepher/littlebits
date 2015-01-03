@@ -29,6 +29,7 @@
 @property NSArray* devices;
 
 @property YFRDevice* selectedDevice;
+
 @end
 
 

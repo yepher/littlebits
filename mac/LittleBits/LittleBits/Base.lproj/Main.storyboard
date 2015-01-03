@@ -649,7 +649,7 @@
         <!--Window Controller-->
         <scene sceneID="R2V-B0-nI4">
             <objects>
-                <windowController id="B8D-0N-5wS" sceneMemberID="viewController">
+                <windowController showSeguePresentationStyle="single" id="B8D-0N-5wS" sceneMemberID="viewController">
                     <window key="window" title="LittleBits CloudBit Tool" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" frameAutosaveName="littleBitWindow" animationBehavior="default" id="IQv-IB-iLA">
                         <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
@@ -764,6 +764,9 @@
                                                                         <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                                     </textFieldCell>
+                                                                    <connections>
+                                                                        <segue destination="XfG-lQ-9wD" kind="sheet" id="qIr-te-N5E"/>
+                                                                    </connections>
                                                                 </textField>
                                                             </subviews>
                                                             <connections>
@@ -813,6 +816,7 @@
                                 </buttonCell>
                                 <connections>
                                     <action selector="monitorDevice:" target="XfG-lQ-9wD" id="Iis-sq-cvN"/>
+                                    <segue destination="Pmw-JL-46L" kind="sheet" id="sxw-TW-JyS"/>
                                 </connections>
                             </button>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="dak-lx-7x4">
@@ -869,8 +873,54 @@
             </objects>
             <point key="canvasLocation" x="75" y="655"/>
         </scene>
+        <!--Guage View Controller-->
+        <scene sceneID="juc-f8-vfT">
+            <objects>
+                <viewController id="Pmw-JL-46L" customClass="YFRGuageViewController" sceneMemberID="viewController">
+                    <view key="view" id="23J-Ht-CEB">
+                        <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <customView translatesAutoresizingMaskIntoConstraints="NO" id="Zg6-iz-qTT" customClass="YFRRobotArmView">
+                                <rect key="frame" x="0.0" y="38" width="480" height="232"/>
+                            </customView>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="bqj-mW-Txn">
+                                <rect key="frame" x="204" y="2" width="73" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="SSc-V1-mef"/>
+                                    <constraint firstAttribute="width" constant="61" id="dUk-7F-KZo"/>
+                                </constraints>
+                                <buttonCell key="cell" type="push" title="Done" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="dIi-aT-IRm">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="onDoneButton:" target="Pmw-JL-46L" id="Dcp-VF-vxO"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="Zg6-iz-qTT" secondAttribute="bottom" constant="38" id="0IP-Sg-tDX"/>
+                            <constraint firstItem="bqj-mW-Txn" firstAttribute="centerX" secondItem="Zg6-iz-qTT" secondAttribute="centerX" id="BtU-dA-CeL"/>
+                            <constraint firstAttribute="trailing" secondItem="Zg6-iz-qTT" secondAttribute="trailing" id="Bu0-dK-n06"/>
+                            <constraint firstItem="Zg6-iz-qTT" firstAttribute="leading" secondItem="23J-Ht-CEB" secondAttribute="leading" id="Ryn-6f-Taq"/>
+                            <constraint firstItem="Zg6-iz-qTT" firstAttribute="top" secondItem="23J-Ht-CEB" secondAttribute="top" id="eqA-KB-fsg"/>
+                            <constraint firstAttribute="bottom" secondItem="bqj-mW-Txn" secondAttribute="bottom" constant="9" id="jsk-Ef-H1W"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="robotArmView" destination="Zg6-iz-qTT" id="Xca-JN-s6k"/>
+                    </connections>
+                </viewController>
+                <customObject id="ShE-Oo-TGf" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="635" y="655"/>
+        </scene>
     </scenes>
     <resources>
         <image name="disconnected" width="200" height="200"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="cq2-FE-JQM"/>
+    </inferredMetricsTieBreakers>
 </document>

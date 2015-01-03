@@ -153,8 +153,111 @@ ps -efxw
 ### Other commands
 
 `````
-[root@alarm /]# ls /usr/local/lb/
-ADC  bit-util  Button  cloud_client  comm-util	DAC  etc  hw_util  LEDcolor  mfg_test
+[root@alarm /]# tree /usr/local/lb
++---lb
+| +---ADC
+| | +---bin
+| +---Button
+| | +---bin
+| +---DAC
+| | +---bin
+| +---LEDcolor
+| | +---bin
+| +---bit-util
+| +---cloud_client
+| | +---bin
+| +---comm-util
+| +---etc
+| | +---hostapd
+| | +---iptables
+| | +---lighttpd
+| | +---systemd
+| +---hw_util
+| | +---bin
+| +---mfg_test
+| | +---ADCtoDAC
+| | | +---bin
+| | +---RGBcycle
+| | | +---bin
+Total directories = 25
+
+`````
+
+### Cloud Client Conf
+
+`````
+#Cloud Client Conf
+[cloud_parameters]
+cloud_host = cloud.littlebits.cc
+cloud_port = 9480
+setup_version = 1.0.0
+protocol_version = 1.1.0
+use_ssl = 1
+dont_ignore_pings = 1 #switch to 1 if you want to connect to staging, this switches ping styles 
+
+[daemon_parameters]
+adc_host = /var/lb/ADC_socket
+dac_host = /var/lb/DAC_socket
+led_host = /var/lb/SET_COLOR_socket
+
+[client_parameters]
+mac_file = /var/lb/mac
+hash_id_file = /var/lb/id
+ssid_file = /var/lb/current_ssid
+device = littlebits-module-cloud
+current_ssid = /var/lb/current_ssid
+#this (and other parameters) should be pulled from the same place as the scripts do
+firmware_version=1.0.140611a
+ping_timeout = 2400
+ping_maxmiss = 3
+rx_buff_len = 100
+tx_buff_len = 1000
+token_len = 11
+`````
+
+### Scripts Conf
+
+`````
+#!/usr/bin/env
+
+# GENERAL
+WADAP=wlan0
+LB_WWW="www.littlebits.cc"
+LB_DOM="littlebits.cc"
+NTP_SERVER="pool.ntp.org"
+TMP_DIR="/var/lb"
+PM_MODE="/var/lb/power_mode"
+CLOUDID="/var/lb/id"
+MACADDR="/var/lb/mac"
+SALT="/var/salt"
+
+# LED COLORS
+DEFAULT_COLOR="violet"
+COMMISSION_COLOR="blue"
+CONNECTING_COLOR="yellow"
+CONNECTED_COLOR="green"
+NOT_CONNECTED_COLOR="red"
+
+# COMMISSIONING
+GATEWAYIP=10.0.0.1
+NETMASK=255.255.255.0
+DOMAIN="cloudsetup.cc"
+NETCTL_CONFIG="/etc/netctl/cloudbit"
+WPA_CONFIG="/etc/wpa_supplicant/cloudbit.conf"
+HOSTAPD_CONFIG="/etc/hostapd/hostapd.conf"
+DNS_CONFIG="/etc/dnsmasq.conf"
+COMM_LOG="/var/log/commissioning"
+
+# DAEMON PATHS
+CCPATH=/usr/local/lb/cloud_client/bin
+BUTTONPATH=/usr/local/lb/Button/bin
+ADCPATH=/usr/local/lb/ADC/bin
+DACPATH=/usr/local/lb/DAC/bin
+LEDPATH=/usr/local/lb/LEDcolor/bin
+
+# SCRIPT PATHS
+TESTPATH=/usr/local/lb/mfg_test
+CUTILPATH=/usr/local/lb/comm-util
 
 `````
 
