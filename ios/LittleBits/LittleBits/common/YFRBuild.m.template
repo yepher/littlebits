@@ -1,0 +1,36 @@
+//
+//  YFRBuild.m
+//  LittleBits
+//
+//  Created by Chris Wilson on 12/31/14.
+//  Copyright (c) 2014 Yepher. All rights reserved.
+//
+
+#import "YFRBuild.h"
+
+/********************
+ WARNING: this file is automatically updated by XCode during the build.
+ Modifications should be make to YFRBuild.m.template instead of YFRBuild.m 
+ ********************/
+
+
+@implementation YFRBuild
+
+NSString *const YFR_VERSION = @"APP_VERSION"
+#ifdef DEBUG
+// Show "d" after version if this is a DEBUG build
+@" d"
+#endif
+;
+
+NSString *const YFR_BUILD_VERSION = @"BUILD_GENERATED_VERSION";
+
+NSString *const YFR_GIT_HASH = @"BUILD_GENERATED_GIT_HASH";
+
+NSString *const YFR_GIT_LAST = @"BUILD_LAST_COMMIT";
+
+NSString *const YFR_BUILD_DATE = @"BUILD_GENERATED_DATE";
+
+
+
+@end

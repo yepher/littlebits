@@ -7,6 +7,37 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8314C3151A58B66F00415192 /* YFRStyleKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 8314C3141A58B66F00415192 /* YFRStyleKit.m */; };
+		8314C3361A58B71F00415192 /* YFRAccessPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 8314C3191A58B71F00415192 /* YFRAccessPoint.m */; };
+		8314C3371A58B71F00415192 /* YFRAccessPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 8314C3191A58B71F00415192 /* YFRAccessPoint.m */; };
+		8314C3381A58B71F00415192 /* YFRDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = 8314C31B1A58B71F00415192 /* YFRDevice.m */; };
+		8314C3391A58B71F00415192 /* YFRDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = 8314C31B1A58B71F00415192 /* YFRDevice.m */; };
+		8314C33A1A58B71F00415192 /* YFRDeviceIdentity.m in Sources */ = {isa = PBXBuildFile; fileRef = 8314C31D1A58B71F00415192 /* YFRDeviceIdentity.m */; };
+		8314C33B1A58B71F00415192 /* YFRDeviceIdentity.m in Sources */ = {isa = PBXBuildFile; fileRef = 8314C31D1A58B71F00415192 /* YFRDeviceIdentity.m */; };
+		8314C33C1A58B71F00415192 /* GCDAsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 8314C3201A58B71F00415192 /* GCDAsyncSocket.m */; };
+		8314C33D1A58B71F00415192 /* GCDAsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 8314C3201A58B71F00415192 /* GCDAsyncSocket.m */; };
+		8314C33E1A58B71F00415192 /* YFRBaseRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 8314C3231A58B71F00415192 /* YFRBaseRequest.m */; };
+		8314C33F1A58B71F00415192 /* YFRBaseRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 8314C3231A58B71F00415192 /* YFRBaseRequest.m */; };
+		8314C3401A58B71F00415192 /* YFRConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 8314C3251A58B71F00415192 /* YFRConstants.m */; };
+		8314C3411A58B71F00415192 /* YFRConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 8314C3251A58B71F00415192 /* YFRConstants.m */; };
+		8314C3421A58B71F00415192 /* YFRGetDeviceInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 8314C3271A58B71F00415192 /* YFRGetDeviceInfo.m */; };
+		8314C3431A58B71F00415192 /* YFRGetDeviceInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 8314C3271A58B71F00415192 /* YFRGetDeviceInfo.m */; };
+		8314C3441A58B71F00415192 /* YFRGetDevices.m in Sources */ = {isa = PBXBuildFile; fileRef = 8314C3291A58B71F00415192 /* YFRGetDevices.m */; };
+		8314C3451A58B71F00415192 /* YFRGetDevices.m in Sources */ = {isa = PBXBuildFile; fileRef = 8314C3291A58B71F00415192 /* YFRGetDevices.m */; };
+		8314C3461A58B71F00415192 /* YFRHttpHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 8314C32B1A58B71F00415192 /* YFRHttpHelper.m */; };
+		8314C3471A58B71F00415192 /* YFRHttpHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 8314C32B1A58B71F00415192 /* YFRHttpHelper.m */; };
+		8314C3481A58B71F00415192 /* YFRIdentifyDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = 8314C32D1A58B71F00415192 /* YFRIdentifyDevice.m */; };
+		8314C3491A58B71F00415192 /* YFRIdentifyDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = 8314C32D1A58B71F00415192 /* YFRIdentifyDevice.m */; };
+		8314C34A1A58B71F00415192 /* YFRLittleBitsClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 8314C32F1A58B71F00415192 /* YFRLittleBitsClient.m */; };
+		8314C34B1A58B71F00415192 /* YFRLittleBitsClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 8314C32F1A58B71F00415192 /* YFRLittleBitsClient.m */; };
+		8314C34C1A58B71F00415192 /* YFROutputRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 8314C3311A58B71F00415192 /* YFROutputRequest.m */; };
+		8314C34D1A58B71F00415192 /* YFROutputRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 8314C3311A58B71F00415192 /* YFROutputRequest.m */; };
+		8314C34E1A58B71F00415192 /* YFRBuild.m in Sources */ = {isa = PBXBuildFile; fileRef = 8314C3331A58B71F00415192 /* YFRBuild.m */; };
+		8314C34F1A58B71F00415192 /* YFRBuild.m in Sources */ = {isa = PBXBuildFile; fileRef = 8314C3331A58B71F00415192 /* YFRBuild.m */; };
+		8314C3501A58B71F00415192 /* YFRBuild.m-e in Resources */ = {isa = PBXBuildFile; fileRef = 8314C3341A58B71F00415192 /* YFRBuild.m-e */; };
+		8314C3511A58B71F00415192 /* YFRBuild.m-e in Resources */ = {isa = PBXBuildFile; fileRef = 8314C3341A58B71F00415192 /* YFRBuild.m-e */; };
+		8314C3521A58B71F00415192 /* YFRBuild.m.template in Resources */ = {isa = PBXBuildFile; fileRef = 8314C3351A58B71F00415192 /* YFRBuild.m.template */; };
+		8314C3531A58B71F00415192 /* YFRBuild.m.template in Resources */ = {isa = PBXBuildFile; fileRef = 8314C3351A58B71F00415192 /* YFRBuild.m.template */; };
 		83D848EC1A522FB400D2BE00 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 83D848EB1A522FB400D2BE00 /* main.m */; };
 		83D848EF1A522FB400D2BE00 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 83D848EE1A522FB400D2BE00 /* AppDelegate.m */; };
 		83D848F21A522FB400D2BE00 /* LittleBits.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 83D848F01A522FB400D2BE00 /* LittleBits.xcdatamodeld */; };
@@ -28,6 +59,36 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8314C3131A58B66F00415192 /* YFRStyleKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YFRStyleKit.h; sourceTree = "<group>"; };
+		8314C3141A58B66F00415192 /* YFRStyleKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YFRStyleKit.m; sourceTree = "<group>"; };
+		8314C3181A58B71F00415192 /* YFRAccessPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YFRAccessPoint.h; sourceTree = "<group>"; };
+		8314C3191A58B71F00415192 /* YFRAccessPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YFRAccessPoint.m; sourceTree = "<group>"; };
+		8314C31A1A58B71F00415192 /* YFRDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YFRDevice.h; sourceTree = "<group>"; };
+		8314C31B1A58B71F00415192 /* YFRDevice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YFRDevice.m; sourceTree = "<group>"; };
+		8314C31C1A58B71F00415192 /* YFRDeviceIdentity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YFRDeviceIdentity.h; sourceTree = "<group>"; };
+		8314C31D1A58B71F00415192 /* YFRDeviceIdentity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YFRDeviceIdentity.m; sourceTree = "<group>"; };
+		8314C31F1A58B71F00415192 /* GCDAsyncSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDAsyncSocket.h; sourceTree = "<group>"; };
+		8314C3201A58B71F00415192 /* GCDAsyncSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDAsyncSocket.m; sourceTree = "<group>"; };
+		8314C3221A58B71F00415192 /* YFRBaseRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YFRBaseRequest.h; sourceTree = "<group>"; };
+		8314C3231A58B71F00415192 /* YFRBaseRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YFRBaseRequest.m; sourceTree = "<group>"; };
+		8314C3241A58B71F00415192 /* YFRConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YFRConstants.h; sourceTree = "<group>"; };
+		8314C3251A58B71F00415192 /* YFRConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YFRConstants.m; sourceTree = "<group>"; };
+		8314C3261A58B71F00415192 /* YFRGetDeviceInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YFRGetDeviceInfo.h; sourceTree = "<group>"; };
+		8314C3271A58B71F00415192 /* YFRGetDeviceInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YFRGetDeviceInfo.m; sourceTree = "<group>"; };
+		8314C3281A58B71F00415192 /* YFRGetDevices.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YFRGetDevices.h; sourceTree = "<group>"; };
+		8314C3291A58B71F00415192 /* YFRGetDevices.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YFRGetDevices.m; sourceTree = "<group>"; };
+		8314C32A1A58B71F00415192 /* YFRHttpHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YFRHttpHelper.h; sourceTree = "<group>"; };
+		8314C32B1A58B71F00415192 /* YFRHttpHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YFRHttpHelper.m; sourceTree = "<group>"; };
+		8314C32C1A58B71F00415192 /* YFRIdentifyDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YFRIdentifyDevice.h; sourceTree = "<group>"; };
+		8314C32D1A58B71F00415192 /* YFRIdentifyDevice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YFRIdentifyDevice.m; sourceTree = "<group>"; };
+		8314C32E1A58B71F00415192 /* YFRLittleBitsClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YFRLittleBitsClient.h; sourceTree = "<group>"; };
+		8314C32F1A58B71F00415192 /* YFRLittleBitsClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YFRLittleBitsClient.m; sourceTree = "<group>"; };
+		8314C3301A58B71F00415192 /* YFROutputRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YFROutputRequest.h; sourceTree = "<group>"; };
+		8314C3311A58B71F00415192 /* YFROutputRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YFROutputRequest.m; sourceTree = "<group>"; };
+		8314C3321A58B71F00415192 /* YFRBuild.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YFRBuild.h; sourceTree = "<group>"; };
+		8314C3331A58B71F00415192 /* YFRBuild.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YFRBuild.m; sourceTree = "<group>"; };
+		8314C3341A58B71F00415192 /* YFRBuild.m-e */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "YFRBuild.m-e"; sourceTree = "<group>"; };
+		8314C3351A58B71F00415192 /* YFRBuild.m.template */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = YFRBuild.m.template; sourceTree = "<group>"; };
 		83D848E61A522FB400D2BE00 /* LittleBits.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LittleBits.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		83D848EA1A522FB400D2BE00 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		83D848EB1A522FB400D2BE00 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -62,6 +123,82 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8314C3111A58B66F00415192 /* views */ = {
+			isa = PBXGroup;
+			children = (
+				8314C3121A58B66F00415192 /* generated */,
+			);
+			path = views;
+			sourceTree = "<group>";
+		};
+		8314C3121A58B66F00415192 /* generated */ = {
+			isa = PBXGroup;
+			children = (
+				8314C3131A58B66F00415192 /* YFRStyleKit.h */,
+				8314C3141A58B66F00415192 /* YFRStyleKit.m */,
+			);
+			path = generated;
+			sourceTree = "<group>";
+		};
+		8314C3161A58B71F00415192 /* common */ = {
+			isa = PBXGroup;
+			children = (
+				8314C3171A58B71F00415192 /* data */,
+				8314C31E1A58B71F00415192 /* external */,
+				8314C3211A58B71F00415192 /* protocol */,
+				8314C3321A58B71F00415192 /* YFRBuild.h */,
+				8314C3331A58B71F00415192 /* YFRBuild.m */,
+				8314C3341A58B71F00415192 /* YFRBuild.m-e */,
+				8314C3351A58B71F00415192 /* YFRBuild.m.template */,
+			);
+			path = common;
+			sourceTree = "<group>";
+		};
+		8314C3171A58B71F00415192 /* data */ = {
+			isa = PBXGroup;
+			children = (
+				8314C3181A58B71F00415192 /* YFRAccessPoint.h */,
+				8314C3191A58B71F00415192 /* YFRAccessPoint.m */,
+				8314C31A1A58B71F00415192 /* YFRDevice.h */,
+				8314C31B1A58B71F00415192 /* YFRDevice.m */,
+				8314C31C1A58B71F00415192 /* YFRDeviceIdentity.h */,
+				8314C31D1A58B71F00415192 /* YFRDeviceIdentity.m */,
+			);
+			path = data;
+			sourceTree = "<group>";
+		};
+		8314C31E1A58B71F00415192 /* external */ = {
+			isa = PBXGroup;
+			children = (
+				8314C31F1A58B71F00415192 /* GCDAsyncSocket.h */,
+				8314C3201A58B71F00415192 /* GCDAsyncSocket.m */,
+			);
+			path = external;
+			sourceTree = "<group>";
+		};
+		8314C3211A58B71F00415192 /* protocol */ = {
+			isa = PBXGroup;
+			children = (
+				8314C3221A58B71F00415192 /* YFRBaseRequest.h */,
+				8314C3231A58B71F00415192 /* YFRBaseRequest.m */,
+				8314C3241A58B71F00415192 /* YFRConstants.h */,
+				8314C3251A58B71F00415192 /* YFRConstants.m */,
+				8314C3261A58B71F00415192 /* YFRGetDeviceInfo.h */,
+				8314C3271A58B71F00415192 /* YFRGetDeviceInfo.m */,
+				8314C3281A58B71F00415192 /* YFRGetDevices.h */,
+				8314C3291A58B71F00415192 /* YFRGetDevices.m */,
+				8314C32A1A58B71F00415192 /* YFRHttpHelper.h */,
+				8314C32B1A58B71F00415192 /* YFRHttpHelper.m */,
+				8314C32C1A58B71F00415192 /* YFRIdentifyDevice.h */,
+				8314C32D1A58B71F00415192 /* YFRIdentifyDevice.m */,
+				8314C32E1A58B71F00415192 /* YFRLittleBitsClient.h */,
+				8314C32F1A58B71F00415192 /* YFRLittleBitsClient.m */,
+				8314C3301A58B71F00415192 /* YFROutputRequest.h */,
+				8314C3311A58B71F00415192 /* YFROutputRequest.m */,
+			);
+			path = protocol;
+			sourceTree = "<group>";
+		};
 		83D848DD1A522FB400D2BE00 = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +220,8 @@
 		83D848E81A522FB400D2BE00 /* LittleBits */ = {
 			isa = PBXGroup;
 			children = (
+				8314C3161A58B71F00415192 /* common */,
+				8314C3111A58B66F00415192 /* views */,
 				83D848ED1A522FB400D2BE00 /* AppDelegate.h */,
 				83D848EE1A522FB400D2BE00 /* AppDelegate.m */,
 				83D848F31A522FB400D2BE00 /* ViewController.h */,
@@ -171,6 +310,7 @@
 				TargetAttributes = {
 					83D848E51A522FB400D2BE00 = {
 						CreatedOnToolsVersion = 6.1.1;
+						DevelopmentTeam = WDCGJTU726;
 					};
 					83D849011A522FB400D2BE00 = {
 						CreatedOnToolsVersion = 6.1.1;
@@ -204,7 +344,9 @@
 			files = (
 				83D848F81A522FB400D2BE00 /* Main.storyboard in Resources */,
 				83D848FD1A522FB400D2BE00 /* LaunchScreen.xib in Resources */,
+				8314C3501A58B71F00415192 /* YFRBuild.m-e in Resources */,
 				83D848FA1A522FB400D2BE00 /* Images.xcassets in Resources */,
+				8314C3521A58B71F00415192 /* YFRBuild.m.template in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -212,6 +354,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8314C3511A58B71F00415192 /* YFRBuild.m-e in Resources */,
+				8314C3531A58B71F00415192 /* YFRBuild.m.template in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -222,10 +366,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8314C34A1A58B71F00415192 /* YFRLittleBitsClient.m in Sources */,
+				8314C3361A58B71F00415192 /* YFRAccessPoint.m in Sources */,
+				8314C33A1A58B71F00415192 /* YFRDeviceIdentity.m in Sources */,
+				8314C3421A58B71F00415192 /* YFRGetDeviceInfo.m in Sources */,
+				8314C3461A58B71F00415192 /* YFRHttpHelper.m in Sources */,
 				83D848EF1A522FB400D2BE00 /* AppDelegate.m in Sources */,
+				8314C3401A58B71F00415192 /* YFRConstants.m in Sources */,
+				8314C3151A58B66F00415192 /* YFRStyleKit.m in Sources */,
 				83D848EC1A522FB400D2BE00 /* main.m in Sources */,
+				8314C34C1A58B71F00415192 /* YFROutputRequest.m in Sources */,
 				83D848F51A522FB400D2BE00 /* ViewController.m in Sources */,
+				8314C3441A58B71F00415192 /* YFRGetDevices.m in Sources */,
+				8314C3481A58B71F00415192 /* YFRIdentifyDevice.m in Sources */,
+				8314C33C1A58B71F00415192 /* GCDAsyncSocket.m in Sources */,
 				83D848F21A522FB400D2BE00 /* LittleBits.xcdatamodeld in Sources */,
+				8314C33E1A58B71F00415192 /* YFRBaseRequest.m in Sources */,
+				8314C34E1A58B71F00415192 /* YFRBuild.m in Sources */,
+				8314C3381A58B71F00415192 /* YFRDevice.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -233,7 +391,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8314C34B1A58B71F00415192 /* YFRLittleBitsClient.m in Sources */,
+				8314C3371A58B71F00415192 /* YFRAccessPoint.m in Sources */,
+				8314C3471A58B71F00415192 /* YFRHttpHelper.m in Sources */,
+				8314C3411A58B71F00415192 /* YFRConstants.m in Sources */,
+				8314C34D1A58B71F00415192 /* YFROutputRequest.m in Sources */,
+				8314C3431A58B71F00415192 /* YFRGetDeviceInfo.m in Sources */,
+				8314C33D1A58B71F00415192 /* GCDAsyncSocket.m in Sources */,
+				8314C33B1A58B71F00415192 /* YFRDeviceIdentity.m in Sources */,
 				83D849091A522FB400D2BE00 /* LittleBitsTests.m in Sources */,
+				8314C3491A58B71F00415192 /* YFRIdentifyDevice.m in Sources */,
+				8314C33F1A58B71F00415192 /* YFRBaseRequest.m in Sources */,
+				8314C3451A58B71F00415192 /* YFRGetDevices.m in Sources */,
+				8314C34F1A58B71F00415192 /* YFRBuild.m in Sources */,
+				8314C3391A58B71F00415192 /* YFRDevice.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -347,6 +518,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = LittleBits/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -357,6 +529,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = LittleBits/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -416,6 +589,7 @@
 				83D8490E1A522FB400D2BE00 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		83D8490F1A522FB400D2BE00 /* Build configuration list for PBXNativeTarget "LittleBitsTests" */ = {
 			isa = XCConfigurationList;
@@ -424,6 +598,7 @@
 				83D849111A522FB400D2BE00 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
