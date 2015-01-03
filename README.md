@@ -6,13 +6,21 @@ This project is for connecting to the CloudBit made By [LittleBits](http://littl
 
 ![http://littlebits.cc/](https://s3.amazonaws.com/media.littlebits.cc/images/littlebits-logo.svg)
 
-### LittleBit API for Mac and iOS
 
-#### Prerequisites
-1. Have a littleBits account to associate your cloudBit to; [Create account](https://littlebits.cc/signup).
+## Other projects
+__If you like this project be sure to check out__:
+
+* On screen design tool [pXRay](https://itunes.apple.com/us/app/pxray/id950409092?mt=12)
+* Advanced Android log viewer [LogRabbit](https://itunes.apple.com/us/app/pxray/id950409092?mt=12)
+* CoreData [viewer](https://github.com/yepher/CoreDataUtility)
+
+## LittleBit API for Mac and iOS
+
+### Prerequisites
+1. Must have a littleBits account to associate your CloudBit to: [Create account](https://littlebits.cc/signup).
 2. Get `ACCESS_TOKEN` and `CLOUDBIT_ID` from [Cloud Control](control.littlebitscloud.cc)
 
-#### References
+### References
 
 * My API Notes [API Notes](https://github.com/yepher/littlebits/blob/master/CloudBit_ProtocolNotes.md)
 * LittleBits API [Access API](http://developer.littlebitscloud.cc/access) 
@@ -20,7 +28,7 @@ This project is for connecting to the CloudBit made By [LittleBits](http://littl
 * Littlebits API [API Examples](https://github.com/littlebits/cloud-api-lessons)
 * Enable SSHD on CloudBit [CloudBit File System](https://github.com/yepher/littlebits/blob/master/CloubitFileSystem.md)
 
-#### Project Layout
+### Project Layout
 
 * `common` - this is used by both Mac and iOS so it must not contain platform specific code
 * `common/extern` - common external dependencies (better to use CocoaPods when possible)
@@ -30,12 +38,12 @@ This project is for connecting to the CloudBit made By [LittleBits](http://littl
 * `ios` - all IOS project code, resources etc
 * `mac` - all OSX project code, resources etc
 
-#### Next Steps
+### Next Steps
 
 * Implement ability to configuring WiFi in cloud bit from Mac or iOS app
 
 
-### Mac App
+## Mac App
 
 To use the Mac App:
 * Launch app
@@ -48,10 +56,12 @@ To use the Mac App:
 
 ![Main Window](https://raw.githubusercontent.com/yepher/littlebits/master/design/screen/mainScreen.png)
 
+YFRStyleKit::drawRobotArmWithAngle: (CGFloat)angle
 ![RobotArm](https://raw.githubusercontent.com/yepher/littlebits/master/design/screen/robotArm.png)
 
+This is a work in progress
 ![Number Display](https://raw.githubusercontent.com/yepher/littlebits/master/design/screen/021Number.png)
 
-### iOS App
+## iOS App
 
 TODO

@@ -15,7 +15,7 @@
 @interface YFRStyleKit : NSObject
 
 // Drawing Methods
-+ (void)drawRobtarmWithAngle: (CGFloat)angle;
++ (void)drawRobotArmViewWithAngle: (CGFloat)angle;
 + (void)drawPressureGuageWithAngle: (CGFloat)angle;
 + (void)drawO21NumberBit;
 

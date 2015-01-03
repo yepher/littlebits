@@ -21,7 +21,7 @@
 
 #pragma mark Drawing Methods
 
-+ (void)drawRobtarmWithAngle: (CGFloat)angle
++ (void)drawRobotArmViewWithAngle: (CGFloat)angle
 {
     //// General Declarations
     CGContextRef context = (CGContextRef)NSGraphicsContext.currentContext.graphicsPort;
@@ -36,26 +36,32 @@
 
     //// Variables Illustration
     {
+        [NSGraphicsContext saveGraphicsState];
+        CGContextTranslateCTM(context, 0.28, 0.3);
+        CGContextRotateCTM(context, 0.08 * M_PI / 180);
+
+
+
         //// Arm 1
         {
             [NSGraphicsContext saveGraphicsState];
-            CGContextTranslateCTM(context, 44, 45);
+            CGContextTranslateCTM(context, 45.51, 49.06);
             CGContextRotateCTM(context, 64.69 * M_PI / 180);
 
 
 
             //// Bezier 61 Drawing
             [NSGraphicsContext saveGraphicsState];
-            CGContextTranslateCTM(context, -1, 0);
+            CGContextTranslateCTM(context, -1.27, 0);
 
             NSBezierPath* bezier61Path = NSBezierPath.bezierPath;
             [bezier61Path moveToPoint: NSMakePoint(1, 36)];
-            [bezier61Path curveToPoint: NSMakePoint(-35, 0) controlPoint1: NSMakePoint(-18.61, 36) controlPoint2: NSMakePoint(-35, 19.61)];
-            [bezier61Path curveToPoint: NSMakePoint(1, -36) controlPoint1: NSMakePoint(-35, -19.61) controlPoint2: NSMakePoint(-18.61, -36)];
-            [bezier61Path curveToPoint: NSMakePoint(114, -26) controlPoint1: NSMakePoint(20.61, -36) controlPoint2: NSMakePoint(99.64, -27)];
-            [bezier61Path curveToPoint: NSMakePoint(140, 0) controlPoint1: NSMakePoint(128.36, -25) controlPoint2: NSMakePoint(140, -15)];
-            [bezier61Path curveToPoint: NSMakePoint(114, 26) controlPoint1: NSMakePoint(140, 15) controlPoint2: NSMakePoint(128.36, 24)];
-            [bezier61Path curveToPoint: NSMakePoint(1, 36) controlPoint1: NSMakePoint(99.64, 28) controlPoint2: NSMakePoint(20.61, 36)];
+            [bezier61Path curveToPoint: NSMakePoint(-35.04, 0) controlPoint1: NSMakePoint(-18.63, 36) controlPoint2: NSMakePoint(-35.04, 19.61)];
+            [bezier61Path curveToPoint: NSMakePoint(1, -36) controlPoint1: NSMakePoint(-35.04, -19.61) controlPoint2: NSMakePoint(-18.63, -36)];
+            [bezier61Path curveToPoint: NSMakePoint(114.12, -26) controlPoint1: NSMakePoint(20.63, -36) controlPoint2: NSMakePoint(99.75, -27)];
+            [bezier61Path curveToPoint: NSMakePoint(140.15, 0) controlPoint1: NSMakePoint(128.5, -25) controlPoint2: NSMakePoint(140.15, -15)];
+            [bezier61Path curveToPoint: NSMakePoint(114.12, 26) controlPoint1: NSMakePoint(140.15, 15) controlPoint2: NSMakePoint(128.5, 24)];
+            [bezier61Path curveToPoint: NSMakePoint(1, 36) controlPoint1: NSMakePoint(99.75, 28) controlPoint2: NSMakePoint(20.63, 36)];
             [bezier61Path closePath];
             [NSColor.whiteColor setFill];
             [bezier61Path fill];
@@ -110,20 +116,20 @@
                         //// Finger A2
                         {
                             [NSGraphicsContext saveGraphicsState];
-                            CGContextTranslateCTM(context, 35.91, 0);
+                            CGContextTranslateCTM(context, 38.91, 6.36);
                             CGContextRotateCTM(context, fingerAngle2 * M_PI / 180);
 
 
 
                             //// Bezier 65 Drawing
                             NSBezierPath* bezier65Path = NSBezierPath.bezierPath;
-                            [bezier65Path moveToPoint: NSMakePoint(-0.5, -7.54)];
-                            [bezier65Path curveToPoint: NSMakePoint(-7.5, -0.04) controlPoint1: NSMakePoint(-3.97, -7.13) controlPoint2: NSMakePoint(-7.5, -4.54)];
-                            [bezier65Path curveToPoint: NSMakePoint(-0.5, 7.46) controlPoint1: NSMakePoint(-7.5, 4.46) controlPoint2: NSMakePoint(-3.97, 7.06)];
-                            [bezier65Path curveToPoint: NSMakePoint(35.69, 4.35) controlPoint1: NSMakePoint(2.97, 7.87) controlPoint2: NSMakePoint(32.83, 4.85)];
-                            [bezier65Path curveToPoint: NSMakePoint(40.5, -0.15) controlPoint1: NSMakePoint(38.6, 3.84) controlPoint2: NSMakePoint(40.5, 2.54)];
-                            [bezier65Path curveToPoint: NSMakePoint(35.69, -4.65) controlPoint1: NSMakePoint(40.5, -2.85) controlPoint2: NSMakePoint(38.6, -4.15)];
-                            [bezier65Path curveToPoint: NSMakePoint(-0.5, -7.54) controlPoint1: NSMakePoint(32.83, -5.15) controlPoint2: NSMakePoint(2.97, -7.94)];
+                            [bezier65Path moveToPoint: NSMakePoint(-7.5, -8.54)];
+                            [bezier65Path curveToPoint: NSMakePoint(-14.5, -1.04) controlPoint1: NSMakePoint(-10.97, -8.13) controlPoint2: NSMakePoint(-14.5, -5.54)];
+                            [bezier65Path curveToPoint: NSMakePoint(-7.5, 6.46) controlPoint1: NSMakePoint(-14.5, 3.46) controlPoint2: NSMakePoint(-10.97, 6.06)];
+                            [bezier65Path curveToPoint: NSMakePoint(28.69, 3.35) controlPoint1: NSMakePoint(-4.03, 6.87) controlPoint2: NSMakePoint(25.83, 3.85)];
+                            [bezier65Path curveToPoint: NSMakePoint(33.5, -1.15) controlPoint1: NSMakePoint(31.6, 2.84) controlPoint2: NSMakePoint(33.5, 1.54)];
+                            [bezier65Path curveToPoint: NSMakePoint(28.69, -5.65) controlPoint1: NSMakePoint(33.5, -3.85) controlPoint2: NSMakePoint(31.6, -5.15)];
+                            [bezier65Path curveToPoint: NSMakePoint(-7.5, -8.54) controlPoint1: NSMakePoint(25.83, -6.15) controlPoint2: NSMakePoint(-4.03, -8.94)];
                             [bezier65Path closePath];
                             [NSColor.whiteColor setFill];
                             [bezier65Path fill];
@@ -139,13 +145,13 @@
 
                         //// Bezier 64 Drawing
                         NSBezierPath* bezier64Path = NSBezierPath.bezierPath;
-                        [bezier64Path moveToPoint: NSMakePoint(36.5, -7.5)];
-                        [bezier64Path curveToPoint: NSMakePoint(43.5, 0) controlPoint1: NSMakePoint(39.97, -7.1) controlPoint2: NSMakePoint(43.5, -4.5)];
-                        [bezier64Path curveToPoint: NSMakePoint(36.5, 7.5) controlPoint1: NSMakePoint(43.5, 4.5) controlPoint2: NSMakePoint(39.97, 7.1)];
-                        [bezier64Path curveToPoint: NSMakePoint(0.31, 8.5) controlPoint1: NSMakePoint(33.03, 7.9) controlPoint2: NSMakePoint(5.17, 8.5)];
-                        [bezier64Path curveToPoint: NSMakePoint(-8.5, 0) controlPoint1: NSMakePoint(-4.56, 8.5) controlPoint2: NSMakePoint(-8.5, 4.69)];
-                        [bezier64Path curveToPoint: NSMakePoint(0.31, -8.5) controlPoint1: NSMakePoint(-8.5, -4.69) controlPoint2: NSMakePoint(-4.56, -8.5)];
-                        [bezier64Path curveToPoint: NSMakePoint(36.5, -7.5) controlPoint1: NSMakePoint(5.17, -8.5) controlPoint2: NSMakePoint(33.03, -7.9)];
+                        [bezier64Path moveToPoint: NSMakePoint(36.5, -8.14)];
+                        [bezier64Path curveToPoint: NSMakePoint(43.5, -0.64) controlPoint1: NSMakePoint(39.97, -7.73) controlPoint2: NSMakePoint(43.5, -5.14)];
+                        [bezier64Path curveToPoint: NSMakePoint(36.5, 6.86) controlPoint1: NSMakePoint(43.5, 3.86) controlPoint2: NSMakePoint(39.97, 6.46)];
+                        [bezier64Path curveToPoint: NSMakePoint(0.31, 7.86) controlPoint1: NSMakePoint(33.03, 7.27) controlPoint2: NSMakePoint(5.17, 7.86)];
+                        [bezier64Path curveToPoint: NSMakePoint(-8.5, -0.64) controlPoint1: NSMakePoint(-4.56, 7.86) controlPoint2: NSMakePoint(-8.5, 4.06)];
+                        [bezier64Path curveToPoint: NSMakePoint(0.31, -9.14) controlPoint1: NSMakePoint(-8.5, -5.33) controlPoint2: NSMakePoint(-4.56, -9.14)];
+                        [bezier64Path curveToPoint: NSMakePoint(36.5, -8.14) controlPoint1: NSMakePoint(5.17, -9.14) controlPoint2: NSMakePoint(33.03, -8.54)];
                         [bezier64Path closePath];
                         [NSColor.whiteColor setFill];
                         [bezier64Path fill];
@@ -155,7 +161,7 @@
 
 
                         //// Oval 56 Drawing
-                        NSBezierPath* oval56Path = [NSBezierPath bezierPathWithOvalInRect: NSMakeRect(32.5, -3.5, 7, 7)];
+                        NSBezierPath* oval56Path = [NSBezierPath bezierPathWithOvalInRect: NSMakeRect(32.5, -4.14, 7, 7)];
                         [NSColor.whiteColor setFill];
                         [oval56Path fill];
                         [primaryStroke setStroke];
@@ -164,7 +170,7 @@
 
 
                         //// Oval 51 Drawing
-                        NSBezierPath* oval51Path = [NSBezierPath bezierPathWithOvalInRect: NSMakeRect(-4.5, -4.5, 9, 9)];
+                        NSBezierPath* oval51Path = [NSBezierPath bezierPathWithOvalInRect: NSMakeRect(-4.5, -5.14, 9, 9)];
                         [NSColor.whiteColor setFill];
                         [oval51Path fill];
                         [primaryStroke setStroke];
@@ -188,20 +194,20 @@
                         //// Finger B2
                         {
                             [NSGraphicsContext saveGraphicsState];
-                            CGContextTranslateCTM(context, 35.91, 0);
+                            CGContextTranslateCTM(context, 40.91, -4.68);
                             CGContextRotateCTM(context, fingerAngle1 * M_PI / 180);
 
 
 
                             //// Bezier 66 Drawing
                             NSBezierPath* bezier66Path = NSBezierPath.bezierPath;
-                            [bezier66Path moveToPoint: NSMakePoint(-0.5, -7.54)];
-                            [bezier66Path curveToPoint: NSMakePoint(-7.5, -0.04) controlPoint1: NSMakePoint(-3.97, -7.13) controlPoint2: NSMakePoint(-7.5, -4.54)];
-                            [bezier66Path curveToPoint: NSMakePoint(-0.5, 7.46) controlPoint1: NSMakePoint(-7.5, 4.46) controlPoint2: NSMakePoint(-3.97, 7.06)];
-                            [bezier66Path curveToPoint: NSMakePoint(35.69, 4.35) controlPoint1: NSMakePoint(2.97, 7.87) controlPoint2: NSMakePoint(32.83, 4.85)];
-                            [bezier66Path curveToPoint: NSMakePoint(40.5, -0.15) controlPoint1: NSMakePoint(38.6, 3.84) controlPoint2: NSMakePoint(40.5, 2.54)];
-                            [bezier66Path curveToPoint: NSMakePoint(35.69, -4.65) controlPoint1: NSMakePoint(40.5, -2.85) controlPoint2: NSMakePoint(38.6, -4.15)];
-                            [bezier66Path curveToPoint: NSMakePoint(-0.5, -7.54) controlPoint1: NSMakePoint(32.83, -5.15) controlPoint2: NSMakePoint(2.97, -7.94)];
+                            [bezier66Path moveToPoint: NSMakePoint(-7.5, -9.54)];
+                            [bezier66Path curveToPoint: NSMakePoint(-14.5, -2.04) controlPoint1: NSMakePoint(-10.97, -9.13) controlPoint2: NSMakePoint(-14.5, -6.54)];
+                            [bezier66Path curveToPoint: NSMakePoint(-7.5, 5.46) controlPoint1: NSMakePoint(-14.5, 2.46) controlPoint2: NSMakePoint(-10.97, 5.06)];
+                            [bezier66Path curveToPoint: NSMakePoint(28.69, 2.35) controlPoint1: NSMakePoint(-4.03, 5.87) controlPoint2: NSMakePoint(25.83, 2.85)];
+                            [bezier66Path curveToPoint: NSMakePoint(33.5, -2.15) controlPoint1: NSMakePoint(31.6, 1.84) controlPoint2: NSMakePoint(33.5, 0.54)];
+                            [bezier66Path curveToPoint: NSMakePoint(28.69, -6.65) controlPoint1: NSMakePoint(33.5, -4.85) controlPoint2: NSMakePoint(31.6, -6.15)];
+                            [bezier66Path curveToPoint: NSMakePoint(-7.5, -9.54) controlPoint1: NSMakePoint(25.83, -7.15) controlPoint2: NSMakePoint(-4.03, -9.94)];
                             [bezier66Path closePath];
                             [NSColor.whiteColor setFill];
                             [bezier66Path fill];
@@ -217,13 +223,13 @@
 
                         //// Bezier 67 Drawing
                         NSBezierPath* bezier67Path = NSBezierPath.bezierPath;
-                        [bezier67Path moveToPoint: NSMakePoint(36.5, -7.5)];
-                        [bezier67Path curveToPoint: NSMakePoint(43.5, 0) controlPoint1: NSMakePoint(39.97, -7.1) controlPoint2: NSMakePoint(43.5, -4.5)];
-                        [bezier67Path curveToPoint: NSMakePoint(36.5, 7.5) controlPoint1: NSMakePoint(43.5, 4.5) controlPoint2: NSMakePoint(39.97, 7.1)];
-                        [bezier67Path curveToPoint: NSMakePoint(0.31, 8.5) controlPoint1: NSMakePoint(33.03, 7.9) controlPoint2: NSMakePoint(5.17, 8.5)];
-                        [bezier67Path curveToPoint: NSMakePoint(-8.5, 0) controlPoint1: NSMakePoint(-4.56, 8.5) controlPoint2: NSMakePoint(-8.5, 4.69)];
-                        [bezier67Path curveToPoint: NSMakePoint(0.31, -8.5) controlPoint1: NSMakePoint(-8.5, -4.69) controlPoint2: NSMakePoint(-4.56, -8.5)];
-                        [bezier67Path curveToPoint: NSMakePoint(36.5, -7.5) controlPoint1: NSMakePoint(5.17, -8.5) controlPoint2: NSMakePoint(33.03, -7.9)];
+                        [bezier67Path moveToPoint: NSMakePoint(35.89, -7.18)];
+                        [bezier67Path curveToPoint: NSMakePoint(42.79, 0.32) controlPoint1: NSMakePoint(39.31, -6.78) controlPoint2: NSMakePoint(42.79, -4.18)];
+                        [bezier67Path curveToPoint: NSMakePoint(35.89, 7.82) controlPoint1: NSMakePoint(42.79, 4.82) controlPoint2: NSMakePoint(39.31, 7.41)];
+                        [bezier67Path curveToPoint: NSMakePoint(0.19, 8.82) controlPoint1: NSMakePoint(32.46, 8.22) controlPoint2: NSMakePoint(4.98, 8.82)];
+                        [bezier67Path curveToPoint: NSMakePoint(-8.5, 0.32) controlPoint1: NSMakePoint(-4.61, 8.82) controlPoint2: NSMakePoint(-8.5, 5.01)];
+                        [bezier67Path curveToPoint: NSMakePoint(0.19, -8.18) controlPoint1: NSMakePoint(-8.5, -4.38) controlPoint2: NSMakePoint(-4.61, -8.18)];
+                        [bezier67Path curveToPoint: NSMakePoint(35.89, -7.18) controlPoint1: NSMakePoint(4.98, -8.18) controlPoint2: NSMakePoint(32.46, -7.59)];
                         [bezier67Path closePath];
                         [NSColor.whiteColor setFill];
                         [bezier67Path fill];
@@ -233,7 +239,7 @@
 
 
                         //// Oval 57 Drawing
-                        NSBezierPath* oval57Path = [NSBezierPath bezierPathWithOvalInRect: NSMakeRect(32.5, -3.5, 7, 7)];
+                        NSBezierPath* oval57Path = [NSBezierPath bezierPathWithOvalInRect: NSMakeRect(31.5, -3.18, 7, 7)];
                         [NSColor.whiteColor setFill];
                         [oval57Path fill];
                         [primaryStroke setStroke];
@@ -242,7 +248,7 @@
 
 
                         //// Oval 58 Drawing
-                        NSBezierPath* oval58Path = [NSBezierPath bezierPathWithOvalInRect: NSMakeRect(-4.5, -4.5, 9, 9)];
+                        NSBezierPath* oval58Path = [NSBezierPath bezierPathWithOvalInRect: NSMakeRect(-4.5, -4.18, 9, 9)];
                         [NSColor.whiteColor setFill];
                         [oval58Path fill];
                         [primaryStroke setStroke];
@@ -263,10 +269,10 @@
                 //// Bezier 62 Drawing
                 NSBezierPath* bezier62Path = NSBezierPath.bezierPath;
                 [bezier62Path moveToPoint: NSMakePoint(99, -21)];
-                [bezier62Path curveToPoint: NSMakePoint(120, 0) controlPoint1: NSMakePoint(110.6, -20) controlPoint2: NSMakePoint(120, -11.6)];
+                [bezier62Path curveToPoint: NSMakePoint(120, -0) controlPoint1: NSMakePoint(110.6, -20) controlPoint2: NSMakePoint(120, -11.6)];
                 [bezier62Path curveToPoint: NSMakePoint(99, 21) controlPoint1: NSMakePoint(120, 11.6) controlPoint2: NSMakePoint(110.6, 20)];
-                [bezier62Path curveToPoint: NSMakePoint(-0, 26) controlPoint1: NSMakePoint(87.4, 22) controlPoint2: NSMakePoint(14.36, 26)];
-                [bezier62Path curveToPoint: NSMakePoint(-26, 0) controlPoint1: NSMakePoint(-14.36, 26) controlPoint2: NSMakePoint(-26, 14.36)];
+                [bezier62Path curveToPoint: NSMakePoint(0, 26) controlPoint1: NSMakePoint(87.4, 22) controlPoint2: NSMakePoint(14.36, 26)];
+                [bezier62Path curveToPoint: NSMakePoint(-26, -0) controlPoint1: NSMakePoint(-14.36, 26) controlPoint2: NSMakePoint(-26, 14.36)];
                 [bezier62Path curveToPoint: NSMakePoint(-0, -26) controlPoint1: NSMakePoint(-26, -14.36) controlPoint2: NSMakePoint(-14.36, -26)];
                 [bezier62Path curveToPoint: NSMakePoint(99, -21) controlPoint1: NSMakePoint(14.36, -26) controlPoint2: NSMakePoint(87.4, -22)];
                 [bezier62Path closePath];
@@ -297,8 +303,8 @@
 
                 //// Bezier 80 Drawing
                 NSBezierPath* bezier80Path = NSBezierPath.bezierPath;
-                [bezier80Path moveToPoint: NSMakePoint(-0, 9)];
-                [bezier80Path lineToPoint: NSMakePoint(-0, -9)];
+                [bezier80Path moveToPoint: NSMakePoint(0, 9)];
+                [bezier80Path lineToPoint: NSMakePoint(0, -9)];
                 [NSColor.whiteColor setFill];
                 [bezier80Path fill];
                 [primaryStroke setStroke];
@@ -364,7 +370,7 @@
 
             //// Bezier 68 Drawing
             NSBezierPath* bezier68Path = NSBezierPath.bezierPath;
-            [bezier68Path moveToPoint: NSMakePoint(0, 12)];
+            [bezier68Path moveToPoint: NSMakePoint(-0, 12)];
             [bezier68Path lineToPoint: NSMakePoint(0, -12)];
             [NSColor.whiteColor setFill];
             [bezier68Path fill];
@@ -387,6 +393,10 @@
 
             [NSGraphicsContext restoreGraphicsState];
         }
+
+
+
+        [NSGraphicsContext restoreGraphicsState];
     }
 }
 

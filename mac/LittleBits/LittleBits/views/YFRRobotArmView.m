@@ -24,7 +24,7 @@
 - (void)drawRect:(NSRect)dirtyRect {
     [super drawRect:dirtyRect];
     
-    [YFRStyleKit drawRobtarmWithAngle:_angle];
+    [YFRStyleKit drawRobotArmViewWithAngle:_angle];
 }
 
 @end
