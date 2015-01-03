@@ -1,5 +1,7 @@
 ![App Icon](https://raw.githubusercontent.com/yepher/littlebits/master/mac/LittleBits/LittleBits/Images.xcassets/AppIcon.appiconset/icon_128x128.png)
 
+Video Demo [Video Demo](http://youtu.be/X0jfV-IYdts?list=UUpMlyEO-3sxvNfnxx2W-l2g)
+
 This project is for connecting to the CloudBit made By [LittleBits](http://littlebitscloud.cc). Check them out to get more information.
 
 ![http://littlebits.cc/](https://s3.amazonaws.com/media.littlebits.cc/images/littlebits-logo.svg)
