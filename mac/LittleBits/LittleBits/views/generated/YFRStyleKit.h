@@ -17,5 +17,6 @@
 // Drawing Methods
 + (void)drawRobtarmWithAngle: (CGFloat)angle;
 + (void)drawPressureGuageWithAngle: (CGFloat)angle;
++ (void)drawO21NumberBit;
 
 @end

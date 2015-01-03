@@ -10,6 +10,7 @@
 #import "YFRGetDevices.h"
 #import "YFRGetDeviceInfo.h"
 
+
 @interface ViewController : NSViewController <NSOutlineViewDataSource, NSOutlineViewDelegate, YFRGetDeviceDelegate, YFRGetDeviceInfoDelegate>
 
 

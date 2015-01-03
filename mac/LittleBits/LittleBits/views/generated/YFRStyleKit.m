@@ -27,12 +27,10 @@
     CGContextRef context = (CGContextRef)NSGraphicsContext.currentContext.graphicsPort;
 
     //// Color Declarations
-    NSColor* color3 = [NSColor colorWithCalibratedRed: 0.156 green: 0.488 blue: 0.862 alpha: 1];
-    NSColor* secondaryStroke = color3;
     NSColor* primaryStroke = [NSColor colorWithCalibratedRed: 0.45 green: 0.45 blue: 0.45 alpha: 1];
 
     //// Variable Declarations
-    CGFloat fingerAngle1 = -60;
+    CGFloat fingerAngle1 = -56;
     CGFloat fingerAngle2 = -fingerAngle1;
     CGFloat largerAngle = -2 * angle;
 
@@ -41,7 +39,7 @@
         //// Arm 1
         {
             [NSGraphicsContext saveGraphicsState];
-            CGContextTranslateCTM(context, 260, 79);
+            CGContextTranslateCTM(context, 44, 45);
             CGContextRotateCTM(context, 64.69 * M_PI / 180);
 
 
@@ -389,139 +387,6 @@
 
             [NSGraphicsContext restoreGraphicsState];
         }
-
-
-        //// Variables Infrastructure Arm
-        {
-            //// Variable
-            {
-                //// Field Angle Drawing
-                NSRect fieldAngleRect = NSMakeRect(51, 263, 52, 24);
-                NSBezierPath* fieldAnglePath = [NSBezierPath bezierPathWithRoundedRect: fieldAngleRect xRadius: 4 yRadius: 4];
-                [secondaryStroke setStroke];
-                [fieldAnglePath setLineWidth: 2];
-                [fieldAnglePath stroke];
-                {
-                    NSString* textContent = @"123";
-                    NSMutableParagraphStyle* fieldAngleStyle = NSMutableParagraphStyle.defaultParagraphStyle.mutableCopy;
-                    fieldAngleStyle.alignment = NSCenterTextAlignment;
-
-                    NSDictionary* fieldAngleFontAttributes = @{NSFontAttributeName: [NSFont fontWithName: @"AvenirNext-Medium" size: 16], NSForegroundColorAttributeName: secondaryStroke, NSParagraphStyleAttributeName: fieldAngleStyle};
-
-                    CGFloat fieldAngleTextHeight = NSHeight([textContent boundingRectWithSize: fieldAngleRect.size options: NSStringDrawingUsesLineFragmentOrigin attributes: fieldAngleFontAttributes]);
-                    NSRect fieldAngleTextRect = NSMakeRect(NSMinX(fieldAngleRect), NSMinY(fieldAngleRect) + (NSHeight(fieldAngleRect) - fieldAngleTextHeight) / 2, NSWidth(fieldAngleRect), fieldAngleTextHeight);
-                    [NSGraphicsContext saveGraphicsState];
-                    NSRectClip(fieldAngleRect);
-                    [textContent drawInRect: NSOffsetRect(fieldAngleTextRect, 0, 5) withAttributes: fieldAngleFontAttributes];
-                    [NSGraphicsContext restoreGraphicsState];
-                }
-
-
-                //// Rectangle 111 Drawing
-                NSRect rectangle111Rect = NSMakeRect(51, 290, 52, 25);
-                {
-                    NSString* textContent = @"angle";
-                    NSMutableParagraphStyle* rectangle111Style = NSMutableParagraphStyle.defaultParagraphStyle.mutableCopy;
-                    rectangle111Style.alignment = NSCenterTextAlignment;
-
-                    NSDictionary* rectangle111FontAttributes = @{NSFontAttributeName: [NSFont fontWithName: @"AvenirNext-Medium" size: 16], NSForegroundColorAttributeName: secondaryStroke, NSParagraphStyleAttributeName: rectangle111Style};
-
-                    CGFloat rectangle111TextHeight = NSHeight([textContent boundingRectWithSize: rectangle111Rect.size options: NSStringDrawingUsesLineFragmentOrigin attributes: rectangle111FontAttributes]);
-                    NSRect rectangle111TextRect = NSMakeRect(NSMinX(rectangle111Rect), NSMinY(rectangle111Rect) + (NSHeight(rectangle111Rect) - rectangle111TextHeight) / 2, NSWidth(rectangle111Rect), rectangle111TextHeight);
-                    [NSGraphicsContext saveGraphicsState];
-                    NSRectClip(rectangle111Rect);
-                    [textContent drawInRect: NSOffsetRect(rectangle111TextRect, 0, 5) withAttributes: rectangle111FontAttributes];
-                    [NSGraphicsContext restoreGraphicsState];
-                }
-            }
-
-
-            //// Variable 5
-            {
-                //// Field Larger Angle Drawing
-                NSRect fieldLargerAngleRect = NSMakeRect(31, 51, 89, 24);
-                NSBezierPath* fieldLargerAnglePath = [NSBezierPath bezierPathWithRoundedRect: fieldLargerAngleRect xRadius: 4 yRadius: 4];
-                [secondaryStroke setStroke];
-                [fieldLargerAnglePath setLineWidth: 2];
-                [fieldLargerAnglePath stroke];
-                {
-                    NSString* textContent = @"-2 * angle";
-                    NSMutableParagraphStyle* fieldLargerAngleStyle = NSMutableParagraphStyle.defaultParagraphStyle.mutableCopy;
-                    fieldLargerAngleStyle.alignment = NSCenterTextAlignment;
-
-                    NSDictionary* fieldLargerAngleFontAttributes = @{NSFontAttributeName: [NSFont fontWithName: @"AvenirNext-Medium" size: 16], NSForegroundColorAttributeName: secondaryStroke, NSParagraphStyleAttributeName: fieldLargerAngleStyle};
-
-                    CGFloat fieldLargerAngleTextHeight = NSHeight([textContent boundingRectWithSize: fieldLargerAngleRect.size options: NSStringDrawingUsesLineFragmentOrigin attributes: fieldLargerAngleFontAttributes]);
-                    NSRect fieldLargerAngleTextRect = NSMakeRect(NSMinX(fieldLargerAngleRect), NSMinY(fieldLargerAngleRect) + (NSHeight(fieldLargerAngleRect) - fieldLargerAngleTextHeight) / 2, NSWidth(fieldLargerAngleRect), fieldLargerAngleTextHeight);
-                    [NSGraphicsContext saveGraphicsState];
-                    NSRectClip(fieldLargerAngleRect);
-                    [textContent drawInRect: NSOffsetRect(fieldLargerAngleTextRect, 0, 5) withAttributes: fieldLargerAngleFontAttributes];
-                    [NSGraphicsContext restoreGraphicsState];
-                }
-
-
-                //// Rectangle 121 Drawing
-                NSRect rectangle121Rect = NSMakeRect(24, 78, 103, 25);
-                {
-                    NSString* textContent = @"largerAngle";
-                    NSMutableParagraphStyle* rectangle121Style = NSMutableParagraphStyle.defaultParagraphStyle.mutableCopy;
-                    rectangle121Style.alignment = NSCenterTextAlignment;
-
-                    NSDictionary* rectangle121FontAttributes = @{NSFontAttributeName: [NSFont fontWithName: @"AvenirNext-Medium" size: 16], NSForegroundColorAttributeName: secondaryStroke, NSParagraphStyleAttributeName: rectangle121Style};
-
-                    CGFloat rectangle121TextHeight = NSHeight([textContent boundingRectWithSize: rectangle121Rect.size options: NSStringDrawingUsesLineFragmentOrigin attributes: rectangle121FontAttributes]);
-                    NSRect rectangle121TextRect = NSMakeRect(NSMinX(rectangle121Rect), NSMinY(rectangle121Rect) + (NSHeight(rectangle121Rect) - rectangle121TextHeight) / 2, NSWidth(rectangle121Rect), rectangle121TextHeight);
-                    [NSGraphicsContext saveGraphicsState];
-                    NSRectClip(rectangle121Rect);
-                    [textContent drawInRect: NSOffsetRect(rectangle121TextRect, 0, 5) withAttributes: rectangle121FontAttributes];
-                    [NSGraphicsContext restoreGraphicsState];
-                }
-            }
-
-
-            //// Rectangle 122 Drawing
-            NSBezierPath* rectangle122Path = NSBezierPath.bezierPath;
-            [rectangle122Path moveToPoint: NSMakePoint(113, 275)];
-            [rectangle122Path lineToPoint: NSMakePoint(159, 275)];
-            [rectangle122Path curveToPoint: NSMakePoint(174, 260) controlPoint1: NSMakePoint(167.28, 275) controlPoint2: NSMakePoint(174, 268.28)];
-            [rectangle122Path lineToPoint: NSMakePoint(174, 123)];
-            [secondaryStroke setStroke];
-            [rectangle122Path setLineWidth: 2];
-            [rectangle122Path stroke];
-
-
-            //// Oval 44 Drawing
-            NSBezierPath* oval44Path = [NSBezierPath bezierPathWithOvalInRect: NSMakeRect(209, 92, 6, 6)];
-            [secondaryStroke setFill];
-            [oval44Path fill];
-
-
-            //// Rectangle 123 Drawing
-            NSBezierPath* rectangle123Path = NSBezierPath.bezierPath;
-            [rectangle123Path moveToPoint: NSMakePoint(174, 131)];
-            [rectangle123Path lineToPoint: NSMakePoint(174, 110)];
-            [rectangle123Path curveToPoint: NSMakePoint(189, 95) controlPoint1: NSMakePoint(174, 101.72) controlPoint2: NSMakePoint(180.72, 95)];
-            [rectangle123Path lineToPoint: NSMakePoint(203, 95)];
-            [rectangle123Path lineToPoint: NSMakePoint(211, 95)];
-            [secondaryStroke setStroke];
-            [rectangle123Path setLineWidth: 2];
-            [rectangle123Path stroke];
-
-
-            //// Rectangle 127 Drawing
-            NSBezierPath* rectangle127Path = NSBezierPath.bezierPath;
-            [rectangle127Path moveToPoint: NSMakePoint(211, 63)];
-            [rectangle127Path lineToPoint: NSMakePoint(120, 63)];
-            [secondaryStroke setStroke];
-            [rectangle127Path setLineWidth: 2];
-            [rectangle127Path stroke];
-
-
-            //// Oval 47 Drawing
-            NSBezierPath* oval47Path = [NSBezierPath bezierPathWithOvalInRect: NSMakeRect(209, 60, 6, 6)];
-            [secondaryStroke setFill];
-            [oval47Path fill];
-        }
     }
 }
 
@@ -543,7 +408,7 @@
         //// Gauge
         {
             //// Oval 35 Drawing
-            NSBezierPath* oval35Path = [NSBezierPath bezierPathWithOvalInRect: NSMakeRect(210, 225, 100, 100)];
+            NSBezierPath* oval35Path = [NSBezierPath bezierPathWithOvalInRect: NSMakeRect(301, 141, 100, 100)];
             [NSColor.whiteColor setFill];
             [oval35Path fill];
             [primaryStroke setStroke];
@@ -553,15 +418,15 @@
 
             //// Oval 36 Drawing
             NSBezierPath* oval36Path = NSBezierPath.bezierPath;
-            [oval36Path moveToPoint: NSMakePoint(224.49, 254.5)];
-            [oval36Path curveToPoint: NSMakePoint(239.5, 310.51) controlPoint1: NSMakePoint(213.17, 274.11) controlPoint2: NSMakePoint(219.89, 299.19)];
-            [oval36Path curveToPoint: NSMakePoint(295.51, 295.5) controlPoint1: NSMakePoint(259.11, 321.83) controlPoint2: NSMakePoint(284.19, 315.11)];
-            [oval36Path curveToPoint: NSMakePoint(295.51, 254.5) controlPoint1: NSMakePoint(302.83, 282.81) controlPoint2: NSMakePoint(302.83, 267.19)];
-            [oval36Path lineToPoint: NSMakePoint(283.38, 261.5)];
-            [oval36Path curveToPoint: NSMakePoint(283.38, 288.5) controlPoint1: NSMakePoint(288.21, 269.85) controlPoint2: NSMakePoint(288.21, 280.15)];
-            [oval36Path curveToPoint: NSMakePoint(246.5, 298.38) controlPoint1: NSMakePoint(275.93, 301.41) controlPoint2: NSMakePoint(259.41, 305.84)];
-            [oval36Path curveToPoint: NSMakePoint(236.62, 261.5) controlPoint1: NSMakePoint(233.59, 290.93) controlPoint2: NSMakePoint(229.16, 274.41)];
-            [oval36Path lineToPoint: NSMakePoint(224.49, 254.5)];
+            [oval36Path moveToPoint: NSMakePoint(315.49, 170.5)];
+            [oval36Path curveToPoint: NSMakePoint(330.5, 226.51) controlPoint1: NSMakePoint(304.17, 190.11) controlPoint2: NSMakePoint(310.89, 215.19)];
+            [oval36Path curveToPoint: NSMakePoint(386.51, 211.5) controlPoint1: NSMakePoint(350.11, 237.83) controlPoint2: NSMakePoint(375.19, 231.11)];
+            [oval36Path curveToPoint: NSMakePoint(386.51, 170.5) controlPoint1: NSMakePoint(393.83, 198.81) controlPoint2: NSMakePoint(393.83, 183.19)];
+            [oval36Path lineToPoint: NSMakePoint(374.38, 177.5)];
+            [oval36Path curveToPoint: NSMakePoint(374.38, 204.5) controlPoint1: NSMakePoint(379.21, 185.85) controlPoint2: NSMakePoint(379.21, 196.15)];
+            [oval36Path curveToPoint: NSMakePoint(337.5, 214.38) controlPoint1: NSMakePoint(366.93, 217.41) controlPoint2: NSMakePoint(350.41, 221.84)];
+            [oval36Path curveToPoint: NSMakePoint(327.62, 177.5) controlPoint1: NSMakePoint(324.59, 206.93) controlPoint2: NSMakePoint(320.16, 190.41)];
+            [oval36Path lineToPoint: NSMakePoint(315.49, 170.5)];
             [oval36Path closePath];
             [primaryStroke setStroke];
             [oval36Path setLineWidth: 2];
@@ -570,7 +435,7 @@
 
             //// Bezier 71 Drawing
             [NSGraphicsContext saveGraphicsState];
-            CGContextTranslateCTM(context, 260, 275);
+            CGContextTranslateCTM(context, 351, 191);
             CGContextRotateCTM(context, 90 * M_PI / 180);
 
             NSBezierPath* bezier71Path = NSBezierPath.bezierPath;
@@ -586,7 +451,7 @@
             //// Gauge Arrow
             {
                 [NSGraphicsContext saveGraphicsState];
-                CGContextTranslateCTM(context, 260, 275);
+                CGContextTranslateCTM(context, 351, 191);
                 CGContextRotateCTM(context, (largerAngle - 161.063293457) * M_PI / 180);
 
 
@@ -628,10 +493,10 @@
 
             //// Bezier 70 Drawing
             NSBezierPath* bezier70Path = NSBezierPath.bezierPath;
-            [bezier70Path moveToPoint: NSMakePoint(219, 275)];
-            [bezier70Path lineToPoint: NSMakePoint(226, 275)];
-            [bezier70Path moveToPoint: NSMakePoint(294, 275)];
-            [bezier70Path lineToPoint: NSMakePoint(301, 275)];
+            [bezier70Path moveToPoint: NSMakePoint(310, 191)];
+            [bezier70Path lineToPoint: NSMakePoint(317, 191)];
+            [bezier70Path moveToPoint: NSMakePoint(385, 191)];
+            [bezier70Path lineToPoint: NSMakePoint(392, 191)];
             [primaryStroke setStroke];
             [bezier70Path setLineWidth: 2];
             [bezier70Path stroke];
@@ -639,7 +504,7 @@
 
             //// Bezier 72 Drawing
             [NSGraphicsContext saveGraphicsState];
-            CGContextTranslateCTM(context, 260, 275);
+            CGContextTranslateCTM(context, 351, 191);
             CGContextRotateCTM(context, 45 * M_PI / 180);
 
             NSBezierPath* bezier72Path = NSBezierPath.bezierPath;
@@ -654,7 +519,7 @@
 
             //// Bezier 73 Drawing
             [NSGraphicsContext saveGraphicsState];
-            CGContextTranslateCTM(context, 260, 275);
+            CGContextTranslateCTM(context, 351, 191);
             CGContextRotateCTM(context, -45 * M_PI / 180);
 
             NSBezierPath* bezier73Path = NSBezierPath.bezierPath;
@@ -669,7 +534,7 @@
 
             //// Bezier 74 Drawing
             [NSGraphicsContext saveGraphicsState];
-            CGContextTranslateCTM(context, 260, 275);
+            CGContextTranslateCTM(context, 351, 191);
             CGContextRotateCTM(context, 22.5 * M_PI / 180);
 
             NSBezierPath* bezier74Path = NSBezierPath.bezierPath;
@@ -684,7 +549,7 @@
 
             //// Bezier 75 Drawing
             [NSGraphicsContext saveGraphicsState];
-            CGContextTranslateCTM(context, 260, 275);
+            CGContextTranslateCTM(context, 351, 191);
             CGContextRotateCTM(context, -22.5 * M_PI / 180);
 
             NSBezierPath* bezier75Path = NSBezierPath.bezierPath;
@@ -699,7 +564,7 @@
 
             //// Bezier 76 Drawing
             [NSGraphicsContext saveGraphicsState];
-            CGContextTranslateCTM(context, 260, 275);
+            CGContextTranslateCTM(context, 351, 191);
             CGContextRotateCTM(context, -67.5 * M_PI / 180);
 
             NSBezierPath* bezier76Path = NSBezierPath.bezierPath;
@@ -716,7 +581,7 @@
 
             //// Bezier 77 Drawing
             [NSGraphicsContext saveGraphicsState];
-            CGContextTranslateCTM(context, 260, 275);
+            CGContextTranslateCTM(context, 351, 191);
             CGContextRotateCTM(context, 67.5 * M_PI / 180);
 
             NSBezierPath* bezier77Path = NSBezierPath.bezierPath;
@@ -733,11 +598,11 @@
 
             //// Oval 59 Drawing
             NSBezierPath* oval59Path = NSBezierPath.bezierPath;
-            [oval59Path moveToPoint: NSMakePoint(276.02, 237.26)];
-            [oval59Path curveToPoint: NSMakePoint(243.98, 237.26) controlPoint1: NSMakePoint(265.78, 232.91) controlPoint2: NSMakePoint(254.22, 232.91)];
-            [oval59Path lineToPoint: NSMakePoint(246.72, 243.7)];
-            [oval59Path curveToPoint: NSMakePoint(273.28, 243.7) controlPoint1: NSMakePoint(255.21, 240.1) controlPoint2: NSMakePoint(264.79, 240.1)];
-            [oval59Path lineToPoint: NSMakePoint(276.02, 237.26)];
+            [oval59Path moveToPoint: NSMakePoint(367.02, 153.26)];
+            [oval59Path curveToPoint: NSMakePoint(334.98, 153.26) controlPoint1: NSMakePoint(356.78, 148.91) controlPoint2: NSMakePoint(345.22, 148.91)];
+            [oval59Path lineToPoint: NSMakePoint(337.72, 159.7)];
+            [oval59Path curveToPoint: NSMakePoint(364.28, 159.7) controlPoint1: NSMakePoint(346.21, 156.1) controlPoint2: NSMakePoint(355.79, 156.1)];
+            [oval59Path lineToPoint: NSMakePoint(367.02, 153.26)];
             [oval59Path closePath];
             [primaryStroke setStroke];
             [oval59Path setLineWidth: 2];
@@ -750,7 +615,7 @@
             //// Variable
             {
                 //// Field Angle Drawing
-                NSRect fieldAngleRect = NSMakeRect(51, 263, 52, 24);
+                NSRect fieldAngleRect = NSMakeRect(142, 179, 52, 24);
                 NSBezierPath* fieldAnglePath = [NSBezierPath bezierPathWithRoundedRect: fieldAngleRect xRadius: 4 yRadius: 4];
                 [secondaryStroke setStroke];
                 [fieldAnglePath setLineWidth: 2];
@@ -772,7 +637,7 @@
 
 
                 //// Rectangle 111 Drawing
-                NSRect rectangle111Rect = NSMakeRect(51, 290, 52, 25);
+                NSRect rectangle111Rect = NSMakeRect(142, 206, 52, 25);
                 {
                     NSString* textContent = @"angle";
                     NSMutableParagraphStyle* rectangle111Style = NSMutableParagraphStyle.defaultParagraphStyle.mutableCopy;
@@ -792,18 +657,141 @@
 
             //// Rectangle 124 Drawing
             NSBezierPath* rectangle124Path = NSBezierPath.bezierPath;
-            [rectangle124Path moveToPoint: NSMakePoint(199, 275)];
-            [rectangle124Path lineToPoint: NSMakePoint(104, 275)];
+            [rectangle124Path moveToPoint: NSMakePoint(290, 191)];
+            [rectangle124Path lineToPoint: NSMakePoint(195, 191)];
             [secondaryStroke setStroke];
             [rectangle124Path setLineWidth: 2];
             [rectangle124Path stroke];
 
 
             //// Oval 45 Drawing
-            NSBezierPath* oval45Path = [NSBezierPath bezierPathWithOvalInRect: NSMakeRect(195, 272, 6, 6)];
+            NSBezierPath* oval45Path = [NSBezierPath bezierPathWithOvalInRect: NSMakeRect(286, 188, 6, 6)];
             [secondaryStroke setFill];
             [oval45Path fill];
         }
+    }
+}
+
++ (void)drawO21NumberBit
+{
+    //// Color Declarations
+    NSColor* outputGreen = [NSColor colorWithCalibratedRed: 0.243 green: 0.829 blue: 0.168 alpha: 1];
+    NSColor* ledOn = [NSColor colorWithCalibratedRed: 0.652 green: 0.8 blue: 0.32 alpha: 1];
+
+    //// Rectangle Drawing
+    NSBezierPath* rectanglePath = [NSBezierPath bezierPathWithRect: NSMakeRect(49, 36, 134, 52)];
+    [outputGreen setFill];
+    [rectanglePath fill];
+
+
+    //// Rectangle 2 Drawing
+    NSBezierPath* rectangle2Path = [NSBezierPath bezierPathWithRect: NSMakeRect(60, 36, 111, 52)];
+    [NSColor.whiteColor setFill];
+    [rectangle2Path fill];
+    [NSColor.grayColor setStroke];
+    [rectangle2Path setLineWidth: 1];
+    [rectangle2Path stroke];
+
+
+    //// SevenSegmentLed1
+    {
+        //// Rectangle 3 Drawing
+        NSBezierPath* rectangle3Path = [NSBezierPath bezierPathWithRect: NSMakeRect(104, 43, 24, 39)];
+        [NSColor.grayColor setFill];
+        [rectangle3Path fill];
+
+
+        //// Rectangle 4 Drawing
+        NSBezierPath* rectangle4Path = [NSBezierPath bezierPathWithRoundedRect: NSMakeRect(110, 76, 12, 3) xRadius: 1.5 yRadius: 1.5];
+        [ledOn setFill];
+        [rectangle4Path fill];
+
+
+        //// Rectangle 5 Drawing
+        NSBezierPath* rectangle5Path = [NSBezierPath bezierPathWithRoundedRect: NSMakeRect(110, 61, 12, 3) xRadius: 1.5 yRadius: 1.5];
+        [ledOn setFill];
+        [rectangle5Path fill];
+
+
+        //// Rectangle 6 Drawing
+        NSBezierPath* rectangle6Path = [NSBezierPath bezierPathWithRoundedRect: NSMakeRect(110, 46, 12, 3) xRadius: 1.5 yRadius: 1.5];
+        [ledOn setFill];
+        [rectangle6Path fill];
+
+
+        //// Rectangle 7 Drawing
+        NSBezierPath* rectangle7Path = [NSBezierPath bezierPathWithRoundedRect: NSMakeRect(107, 64, 3, 12) xRadius: 1.5 yRadius: 1.5];
+        [ledOn setFill];
+        [rectangle7Path fill];
+
+
+        //// Rectangle 8 Drawing
+        NSBezierPath* rectangle8Path = [NSBezierPath bezierPathWithRoundedRect: NSMakeRect(122, 64, 3, 12) xRadius: 1.5 yRadius: 1.5];
+        [ledOn setFill];
+        [rectangle8Path fill];
+
+
+        //// Rectangle 9 Drawing
+        NSBezierPath* rectangle9Path = [NSBezierPath bezierPathWithRoundedRect: NSMakeRect(122, 49, 3, 12) xRadius: 1.5 yRadius: 1.5];
+        [ledOn setFill];
+        [rectangle9Path fill];
+
+
+        //// Rectangle 10 Drawing
+        NSBezierPath* rectangle10Path = [NSBezierPath bezierPathWithRoundedRect: NSMakeRect(107, 49, 3, 12) xRadius: 1.5 yRadius: 1.5];
+        [ledOn setFill];
+        [rectangle10Path fill];
+    }
+
+
+    //// SevenSegmentLed2
+    {
+        //// Rectangle 11 Drawing
+        NSBezierPath* rectangle11Path = [NSBezierPath bezierPathWithRect: NSMakeRect(132, 43, 24, 39)];
+        [NSColor.grayColor setFill];
+        [rectangle11Path fill];
+
+
+        //// Rectangle 12 Drawing
+        NSBezierPath* rectangle12Path = [NSBezierPath bezierPathWithRoundedRect: NSMakeRect(138, 76, 12, 3) xRadius: 1.5 yRadius: 1.5];
+        [ledOn setFill];
+        [rectangle12Path fill];
+
+
+        //// Rectangle 13 Drawing
+        NSBezierPath* rectangle13Path = [NSBezierPath bezierPathWithRoundedRect: NSMakeRect(138, 61, 12, 3) xRadius: 1.5 yRadius: 1.5];
+        [ledOn setFill];
+        [rectangle13Path fill];
+
+
+        //// Rectangle 14 Drawing
+        NSBezierPath* rectangle14Path = [NSBezierPath bezierPathWithRoundedRect: NSMakeRect(138, 46, 12, 3) xRadius: 1.5 yRadius: 1.5];
+        [ledOn setFill];
+        [rectangle14Path fill];
+
+
+        //// Rectangle 15 Drawing
+        NSBezierPath* rectangle15Path = [NSBezierPath bezierPathWithRoundedRect: NSMakeRect(135, 64, 3, 12) xRadius: 1.5 yRadius: 1.5];
+        [ledOn setFill];
+        [rectangle15Path fill];
+
+
+        //// Rectangle 16 Drawing
+        NSBezierPath* rectangle16Path = [NSBezierPath bezierPathWithRoundedRect: NSMakeRect(150, 64, 3, 12) xRadius: 1.5 yRadius: 1.5];
+        [ledOn setFill];
+        [rectangle16Path fill];
+
+
+        //// Rectangle 17 Drawing
+        NSBezierPath* rectangle17Path = [NSBezierPath bezierPathWithRoundedRect: NSMakeRect(150, 49, 3, 12) xRadius: 1.5 yRadius: 1.5];
+        [ledOn setFill];
+        [rectangle17Path fill];
+
+
+        //// Rectangle 18 Drawing
+        NSBezierPath* rectangle18Path = [NSBezierPath bezierPathWithRoundedRect: NSMakeRect(135, 49, 3, 12) xRadius: 1.5 yRadius: 1.5];
+        [ledOn setFill];
+        [rectangle18Path fill];
     }
 }
 

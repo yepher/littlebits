@@ -11,7 +11,6 @@
 		833316801A58365200DC255D /* YFRStyleKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 8333167F1A58365200DC255D /* YFRStyleKit.m */; };
 		833316831A58398500DC255D /* YFRGuageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 833316821A58398500DC255D /* YFRGuageViewController.m */; };
 		833316861A583B1800DC255D /* YFRRobotArmView.m in Sources */ = {isa = PBXBuildFile; fileRef = 833316851A583B1800DC255D /* YFRRobotArmView.m */; };
-		833316891A583E9700DC255D /* YFRGuageWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 833316881A583E9700DC255D /* YFRGuageWindowController.m */; };
 		83D849221A522FDA00D2BE00 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 83D849211A522FDA00D2BE00 /* AppDelegate.m */; };
 		83D849241A522FDA00D2BE00 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 83D849231A522FDA00D2BE00 /* main.m */; };
 		83D849271A522FDA00D2BE00 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83D849261A522FDA00D2BE00 /* ViewController.m */; };
@@ -70,8 +69,6 @@
 		833316821A58398500DC255D /* YFRGuageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YFRGuageViewController.m; sourceTree = "<group>"; };
 		833316841A583B1800DC255D /* YFRRobotArmView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YFRRobotArmView.h; sourceTree = "<group>"; };
 		833316851A583B1800DC255D /* YFRRobotArmView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YFRRobotArmView.m; sourceTree = "<group>"; };
-		833316871A583E9700DC255D /* YFRGuageWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YFRGuageWindowController.h; sourceTree = "<group>"; };
-		833316881A583E9700DC255D /* YFRGuageWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YFRGuageWindowController.m; sourceTree = "<group>"; };
 		83D8491B1A522FDA00D2BE00 /* LittleBits.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LittleBits.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		83D8491F1A522FDA00D2BE00 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		83D849201A522FDA00D2BE00 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -147,8 +144,6 @@
 				83D849261A522FDA00D2BE00 /* ViewController.m */,
 				833316811A58398500DC255D /* YFRGuageViewController.h */,
 				833316821A58398500DC255D /* YFRGuageViewController.m */,
-				833316871A583E9700DC255D /* YFRGuageWindowController.h */,
-				833316881A583E9700DC255D /* YFRGuageWindowController.m */,
 				833316841A583B1800DC255D /* YFRRobotArmView.h */,
 				833316851A583B1800DC255D /* YFRRobotArmView.m */,
 			);
@@ -462,7 +457,6 @@
 				83D849271A522FDA00D2BE00 /* ViewController.m in Sources */,
 				833316861A583B1800DC255D /* YFRRobotArmView.m in Sources */,
 				83DB83D11A537C0E004B7DCA /* YFROutputRequest.m in Sources */,
-				833316891A583E9700DC255D /* YFRGuageWindowController.m in Sources */,
 				83DB83C71A5347B5004B7DCA /* YFRConstants.m in Sources */,
 				833316801A58365200DC255D /* YFRStyleKit.m in Sources */,
 				833316831A58398500DC255D /* YFRGuageViewController.m in Sources */,

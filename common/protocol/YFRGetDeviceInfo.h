@@ -15,7 +15,7 @@
 
 - (void) onDeviceUpdate:(NSDictionary*) deviceInfo;
 
-- (void) onMontorEndedForDevice:(YFRDevice*) device;
+- (void) onMonitorEndedForDevice:(YFRDevice*) device;
 
 @end
 

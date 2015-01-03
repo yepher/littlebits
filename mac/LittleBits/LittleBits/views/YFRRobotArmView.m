@@ -11,10 +11,20 @@
 
 @implementation YFRRobotArmView
 
+- (instancetype)initWithCoder:(NSCoder *)coder
+{
+    self = [super initWithCoder:coder];
+    if (self) {
+        self.angle = -29.0f;
+    }
+    return self;
+}
+
+
 - (void)drawRect:(NSRect)dirtyRect {
     [super drawRect:dirtyRect];
     
-    [YFRStyleKit drawRobtarmWithAngle:-29.0f];
+    [YFRStyleKit drawRobtarmWithAngle:_angle];
 }
 
 @end

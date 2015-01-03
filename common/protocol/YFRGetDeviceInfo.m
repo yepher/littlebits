@@ -76,7 +76,7 @@
 {
     NSLog(@"%s", __FUNCTION__);
     if (self.delegate != nil) {
-        [self.delegate onMontorEndedForDevice:self.device];
+        [self.delegate onMonitorEndedForDevice:self.device];
     }
 }
 

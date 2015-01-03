@@ -14,6 +14,7 @@
 #import "YFRAccessPoint.h"
 #import "YFROutputRequest.h"
 #import "YFRGetDeviceInfo.h"
+#import "YFRGuageViewController.h"
 
 @interface ViewController ()
 
@@ -86,7 +87,7 @@
     [self.cloudLevelOutput setIntegerValue:[value integerValue]];
 }
 
-- (void) onMontorEndedForDevice:(YFRDevice*) device {
+- (void) onMonitorEndedForDevice:(YFRDevice*) device {
     NSLog(@"%s", __PRETTY_FUNCTION__);
     self.isMonitoringDevice = NO;
 }
@@ -134,15 +135,27 @@
 }
 
 - (IBAction)monitorDevice:(id)sender {
-    if (self.isMonitoringDevice) {
-        NSLog(@"Ingore monitor since monitor is already running.");
-        return;
+//    if (self.isMonitoringDevice) {
+//        NSLog(@"Ingore monitor since monitor is already running.");
+//        return;
+//    }
+//    self.isMonitoringDevice = YES;
+//    YFRGetDeviceInfo* request = [YFRGetDeviceInfo new];
+//    request.device = self.selectedDevice;
+//    request.delegate = self;
+//    [request doRequest];
+}
+
+#pragma makr - Segue
+
+- (void) prepareForSegue:(NSStoryboardSegue *)segue sender:(id)sender {
+
+    if([segue.identifier isEqualToString:@"robotArmSegue"]) {
+        YFRGuageViewController* vc = segue.destinationController;
+        [vc setSelectedDevice:self.selectedDevice];
+    } else {
+        NSLog(@"Unknown Segue: %s [%@]", __PRETTY_FUNCTION__, segue.identifier);
     }
-    self.isMonitoringDevice = YES;
-    YFRGetDeviceInfo* request = [YFRGetDeviceInfo new];
-    request.device = self.selectedDevice;
-    request.delegate = self;
-    [request doRequest];
 }
 
 #pragma mark - NSOutlineView Delegates

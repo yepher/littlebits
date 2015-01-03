@@ -7,10 +7,11 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import "YFRGetDevices.h"
+#import "YFRGetDeviceInfo.h"
 
-@class YFRRobotArmView;
+@interface YFRGuageViewController : NSViewController <YFRGetDeviceInfoDelegate>
 
-@interface YFRGuageViewController : NSViewController
-@property (weak) IBOutlet YFRRobotArmView *robotArmView;
+@property (strong) YFRDevice* selectedDevice;
 
 @end

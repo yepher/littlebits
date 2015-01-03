@@ -816,7 +816,7 @@
                                 </buttonCell>
                                 <connections>
                                     <action selector="monitorDevice:" target="XfG-lQ-9wD" id="Iis-sq-cvN"/>
-                                    <segue destination="Pmw-JL-46L" kind="sheet" id="sxw-TW-JyS"/>
+                                    <segue destination="Pmw-JL-46L" kind="sheet" identifier="robotArmSegue" id="sxw-TW-JyS"/>
                                 </connections>
                             </button>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="dak-lx-7x4">

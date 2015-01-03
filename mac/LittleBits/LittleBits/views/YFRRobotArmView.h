@@ -10,4 +10,8 @@
 
 @interface YFRRobotArmView : NSView
 
+@property CGFloat angle;
+
+@property CGFloat fingerAngle;
+
 @end
