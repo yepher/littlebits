@@ -67,4 +67,6 @@ This is a work in progress
 
 ### iOS Screen Shots
 
-![Number Display](https://raw.githubusercontent.com/yepher/littlebits/master/design/screen/021Number.png)
+![iOS Main Screen](https://raw.githubusercontent.com/yepher/littlebits/master/design/screen/ios_mainScreen.png)
+
+![iOS Robot Arm](https://raw.githubusercontent.com/yepher/littlebits/master/design/screen/ios_robotArm.png)
