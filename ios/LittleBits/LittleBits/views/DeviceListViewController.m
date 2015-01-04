@@ -98,7 +98,7 @@
     YFRDevice* device = self.devices[indexPath.row];
     
     YFRGuageViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"guageViewController"];
-    [vc setDevice:device];
+    [vc setSelectedDevice:device];
     [self.navigationController pushViewController:vc animated:YES];
     
     

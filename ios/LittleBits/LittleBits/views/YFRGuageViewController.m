@@ -7,8 +7,13 @@
 //
 
 #import "YFRGuageViewController.h"
+#import "YFRRobotArmView.h"
 
 @interface YFRGuageViewController ()
+
+@property (weak, nonatomic) IBOutlet YFRRobotArmView* robotArmView;
+
+@property BOOL isMonitoringDevice;
 
 @end
 
@@ -16,13 +21,35 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    _isMonitoringDevice = NO;
+}
+
+- (void) viewDidAppear:(BOOL)animated {
+    [self monitorDevice:self.selectedDevice];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+- (IBAction)onInputValueChanged:(id)sender {
+    NSLog(@"onInputValueChanged: %@", sender);
+}
+
+- (void) monitorDevice:(id)sender {
+    if (self.isMonitoringDevice) {
+        NSLog(@"Ingore monitor since monitor is already running.");
+        return;
+    }
+    
+    self.isMonitoringDevice = YES;
+    YFRGetDeviceInfo* request = [YFRGetDeviceInfo new];
+    request.device = self.selectedDevice;
+    request.delegate = self;
+    [request doRequest];
+}
+
 
 /*
 #pragma mark - Navigation
@@ -33,5 +60,22 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+
+- (void) onDeviceUpdate:(NSDictionary *)deviceInfo {
+    NSNumber* value = [deviceInfo valueForKey:@"percent"];
+    CGFloat angle = -[value floatValue];
+    
+    if (self.robotArmView.angle != angle) {
+        [self.robotArmView setAngle:angle];
+        [self.robotArmView setNeedsDisplay];
+    }
+}
+
+- (void) onMonitorEndedForDevice:(YFRDevice*) device {
+    NSLog(@"%s", __PRETTY_FUNCTION__);
+    self.isMonitoringDevice = NO;
+}
+
 
 @end

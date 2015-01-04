@@ -7,11 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "YFRGetDevices.h"
+#import "YFRGetDeviceInfo.h"
+
 
 @class YFRDevice;
 
-@interface YFRGuageViewController : UIViewController
+@interface YFRGuageViewController : UIViewController <YFRGetDeviceInfoDelegate>
 
-@property (strong, nonatomic) YFRDevice* device;
+@property (strong, nonatomic) YFRDevice* selectedDevice;
 
 @end

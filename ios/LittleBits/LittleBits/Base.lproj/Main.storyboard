@@ -129,10 +129,16 @@
                             </view>
                             <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="50" minValue="0.0" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="NjC-Rv-V7y">
                                 <rect key="frame" x="14" y="550" width="572" height="31"/>
+                                <connections>
+                                    <action selector="onInputValueChanged:" destination="1cV-VN-nxa" eventType="valueChanged" id="luZ-za-Zny"/>
+                                </connections>
                             </slider>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="robotArmView" destination="aXM-Ky-pNh" id="UuR-tz-KWp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tu4-7h-dO2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

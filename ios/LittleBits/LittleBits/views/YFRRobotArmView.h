@@ -10,4 +10,6 @@
 
 @interface YFRRobotArmView : UIView
 
+@property CGFloat angle;
+
 @end
