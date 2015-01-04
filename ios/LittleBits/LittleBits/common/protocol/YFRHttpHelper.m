@@ -71,8 +71,13 @@
     
     // send request to server
     NSData *result = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
+    if (error) {
+        NSLog(@"Failed to make request because: %@", error);
+        return;
+    }
     
     NSInteger responseCode = [response statusCode];
+    
     if (responseCode == 200) {
     
         // Get JSON result (server sends back JSON response for several non-200 status codes)
