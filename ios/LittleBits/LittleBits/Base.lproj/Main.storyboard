@@ -123,18 +123,27 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aXM-Ky-pNh" customClass="YFRRobotArmView">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aXM-Ky-pNh" customClass="YFRRobotArmView">
                                 <rect key="frame" x="16" y="20" width="568" height="467"/>
                                 <color key="backgroundColor" red="0.1647058874" green="0.97254908080000002" blue="0.58039218189999997" alpha="1" colorSpace="deviceRGB"/>
                             </view>
-                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="50" minValue="0.0" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="NjC-Rv-V7y">
-                                <rect key="frame" x="14" y="550" width="572" height="31"/>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="50" minValue="0.0" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="NjC-Rv-V7y">
+                                <rect key="frame" x="81" y="550" width="438" height="31"/>
                                 <connections>
                                     <action selector="onInputValueChanged:" destination="1cV-VN-nxa" eventType="valueChanged" id="luZ-za-Zny"/>
                                 </connections>
                             </slider>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="NjC-Rv-V7y" firstAttribute="top" secondItem="aXM-Ky-pNh" secondAttribute="bottom" constant="63" id="Rgv-qI-VnZ"/>
+                            <constraint firstItem="aXM-Ky-pNh" firstAttribute="leading" secondItem="EpF-8w-tCF" secondAttribute="leadingMargin" id="SXw-7W-PwM"/>
+                            <constraint firstItem="aXM-Ky-pNh" firstAttribute="centerX" secondItem="NjC-Rv-V7y" secondAttribute="centerX" id="TZg-ct-0fw"/>
+                            <constraint firstItem="aXM-Ky-pNh" firstAttribute="top" secondItem="wRI-4q-Sgl" secondAttribute="bottom" id="Wq3-eI-dIl"/>
+                            <constraint firstItem="NjC-Rv-V7y" firstAttribute="leading" secondItem="EpF-8w-tCF" secondAttribute="leadingMargin" constant="67" id="bGw-CV-904"/>
+                            <constraint firstAttribute="bottom" secondItem="NjC-Rv-V7y" secondAttribute="bottom" constant="20" symbolic="YES" id="f3a-DF-kuZ"/>
+                            <constraint firstItem="aXM-Ky-pNh" firstAttribute="trailing" secondItem="EpF-8w-tCF" secondAttribute="trailingMargin" id="xCF-XI-ZHb"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="robotArmView" destination="aXM-Ky-pNh" id="UuR-tz-KWp"/>

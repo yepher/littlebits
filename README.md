@@ -64,4 +64,7 @@ This is a work in progress
 
 ## iOS App
 
-TODO
+
+### iOS Screen Shots
+
+![Number Display](https://raw.githubusercontent.com/yepher/littlebits/master/design/screen/021Number.png)

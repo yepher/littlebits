@@ -8,6 +8,8 @@
 
 #import "YFRGuageViewController.h"
 #import "YFRRobotArmView.h"
+#import "YFROutputRequest.h"
+#import "YFRHttpHelper.h"
 
 @interface YFRGuageViewController ()
 
@@ -35,6 +37,17 @@
 
 - (IBAction)onInputValueChanged:(id)sender {
     NSLog(@"onInputValueChanged: %@", sender);
+    if (self.selectedDevice == nil) {
+        return;
+    }
+    UISlider* slider = sender;
+    YFROutputRequest* request = [YFROutputRequest new];
+    request.level = [[NSNumber numberWithFloat:slider.value] integerValue];
+    request.duration = -1;
+    request.device = self.selectedDevice;
+    
+    YFRHttpHelper* httpHelper = [YFRHttpHelper new];
+    [httpHelper doRequest: request];
 }
 
 - (void) monitorDevice:(id)sender {
